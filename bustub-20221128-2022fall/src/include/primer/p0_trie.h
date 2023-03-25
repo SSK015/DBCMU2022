@@ -111,7 +111,11 @@ class TrieNode {
    * @param child Unique pointer created for the child node. This should be added to children_ map.
    * @return Pointer to unique_ptr of the inserted child node. If insertion fails, return nullptr.
    */
-  std::unique_ptr<TrieNode> *InsertChildNode(char key_char, std::unique_ptr<TrieNode> &&child) { auto ans = children_.insert(std::make_pair(key_char, std::move(child))); if(ans.second)return &ans.first->second; return nullptr; }
+  std::unique_ptr<TrieNode> *InsertChildNode(char key_char, std::unique_ptr<TrieNode> &&child) { 
+    if (HasChild(key_char) || key_char != child->key_char_) {
+      return nullptr;
+    }
+    auto ans = children_.insert(std::make_pair(key_char, std::move(child))); if(ans.second)return &ans.first->second; return nullptr; }
 
   /**
    * TODO(P0): Add implementation
@@ -183,8 +187,11 @@ class TrieNodeWithValue : public TrieNode {
    * @param trieNode TrieNode whose data is to be moved to TrieNodeWithValue
    * @param value
    */
-  TrieNodeWithValue(TrieNode &&trieNode, T value) {}
-
+//  TrieNodeWithValue(TrieNode &&trieNode, T value) {}
+  TrieNodeWithValue(TrieNode &&trieNode, T value) : TrieNode(std::forward<TrieNode>(trieNode)) {
+    value_ = value;
+    SetEndNode(true);
+  }
   /**
    * TODO(P0): Add implementation
    *
@@ -198,8 +205,11 @@ class TrieNodeWithValue : public TrieNode {
    * @param key_char Key char of this node
    * @param value Value of this node
    */
-  TrieNodeWithValue(char key_char, T value) {}
-
+  //TrieNodeWithValue(char key_char, T value) {}
+  TrieNodeWithValue(char key_char, T value) : TrieNode(key_char) {
+    value_ = value;
+    SetEndNode(true);
+  }
   /**
    * @brief Destroy the Trie Node With Value object
    */
@@ -231,8 +241,11 @@ class Trie {
    * @brief Construct a new Trie object. Initialize the root node with '\0'
    * character.
    */
-  Trie() = default;
-
+  //Trie() = default;
+Trie() {
+    auto *root = new TrieNode('\0');
+    root_.reset(root);
+  }
   /**
    * TODO(P0): Add implementation
    *
@@ -261,7 +274,38 @@ class Trie {
    */
   template <typename T>
   bool Insert(const std::string &key, T value) {
-    return false;
+      if (key.empty()) return false;
+      auto ch = key.begin();
+      auto pre = &root_;
+      while(ch != key.end()) {
+          auto op = ch;
+          ch++;
+          if(ch == key.end()) {
+            break;
+          }
+          auto tmp = pre->get();
+          auto ans = tmp->HasChild(*op);
+          if (!ans) {
+            pre = tmp->InsertChildNode(*op, std::make_unique<TrieNode>(*op));
+          } else {
+            pre = tmp->GetChildNode(*op);
+          }
+          
+      }
+      ch--;
+      auto end_node = pre->get()->GetChildNode(*ch);
+      if (end_node != nullptr && end_node->get()->IsEndNode()) {
+        return false;
+      } 
+      if (end_node != nullptr) {
+        auto new_node = new TrieNodeWithValue(std::move(**end_node), value);
+        end_node->reset(new_node);
+        return true;
+      }
+      pre = pre->get()->InsertChildNode(*ch, std::make_unique<TrieNode>(*ch));
+      auto new_node = new TrieNodeWithValue(std::move(**pre), value);
+      pre->reset(new_node);
+      return true;
   }
 
   /**
@@ -304,6 +348,30 @@ class Trie {
   template <typename T>
   T GetValue(const std::string &key, bool *success) {
     *success = false;
+
+    auto pre = &root_;
+    auto ch = key.begin();
+    while (ch != key.end()) {
+      auto op = ch++;
+      auto next_node = pre->get()->GetChildNode(*op);
+
+      if (!next_node) {
+        *success = false;
+        break;
+      }
+      if (next_node->get()->IsEndNode() && ch == key.end()) {
+        auto state = dynamic_cast<TrieNodeWithValue<T> *>(next_node->get());
+        if (!state) {
+          *success = false;
+          break;
+        }
+        *success = true;
+        return state->GetValue();
+      }
+      pre = next_node;
+      
+     }
+    
     return {};
   }
 };
