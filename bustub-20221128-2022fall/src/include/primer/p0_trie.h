@@ -15,6 +15,7 @@
 #include <memory>
 #include <stdexcept>
 #include <string>
+#include <stack>
 #include <unordered_map>
 #include <utility>
 #include <vector>
@@ -37,7 +38,7 @@ class TrieNode {
    *
    * @param key_char Key character of this trie node
    */
-  explicit TrieNode(char key_char) {key_char_ = key_char; is_end_ = false;}
+  explicit TrieNode(char key_char) {key_char_ = key_char; is_end_ = false; children_.clear();}
 
   /**
    * TODO(P0): Add implementation
@@ -275,6 +276,7 @@ Trie() {
   template <typename T>
   bool Insert(const std::string &key, T value) {
       if (key.empty()) return false;
+      latch_.WLock();
       auto ch = key.begin();
       auto pre = &root_;
       while(ch != key.end()) {
@@ -295,16 +297,19 @@ Trie() {
       ch--;
       auto end_node = pre->get()->GetChildNode(*ch);
       if (end_node != nullptr && end_node->get()->IsEndNode()) {
+        latch_.WUnlock();
         return false;
       } 
       if (end_node != nullptr) {
         auto new_node = new TrieNodeWithValue(std::move(**end_node), value);
         end_node->reset(new_node);
+        latch_.WUnlock();
         return true;
       }
       pre = pre->get()->InsertChildNode(*ch, std::make_unique<TrieNode>(*ch));
       auto new_node = new TrieNodeWithValue(std::move(**pre), value);
       pre->reset(new_node);
+      latch_.WUnlock();
       return true;
   }
 
@@ -325,7 +330,39 @@ Trie() {
    * @param key Key used to traverse the trie and find the correct node
    * @return True if the key exists and is removed, false otherwise
    */
-  bool Remove(const std::string &key) { return false; }
+  bool Remove(const std::string &key) { 
+    if (key.empty()) return false;
+    latch_.WLock();
+    auto ch = key.begin();
+    auto pre = &root_;
+    std::stack<std::tuple<char, std::unique_ptr<TrieNode> *>> s;
+
+    while (ch != key.end()) {
+      auto op = ch++;
+      if (pre->get()->HasChild(*op)) {
+          s.push(std::make_tuple(*op, pre));
+          pre = pre->get()->GetChildNode(*op);
+      } else {
+        latch_.WUnlock();
+        return false;
+      }
+
+    }  
+    
+    while (!s.empty()) {
+      auto temp = s.top();
+      s.pop();
+      auto key = std::get<0>(temp);
+      auto node = std::get<1>(temp);
+      auto state = (*node)->GetChildNode(key);
+      if (state == nullptr || !(*state)->HasChildren()) {
+        (*node)->RemoveChildNode(key);
+      }
+
+    }
+    latch_.WUnlock();
+    return true; 
+  }
 
   /**
    * TODO(P0): Add implementation
@@ -348,7 +385,7 @@ Trie() {
   template <typename T>
   T GetValue(const std::string &key, bool *success) {
     *success = false;
-
+    latch_.RLock();
     auto pre = &root_;
     auto ch = key.begin();
     while (ch != key.end()) {
@@ -366,12 +403,13 @@ Trie() {
           break;
         }
         *success = true;
+        latch_.RUnlock();
         return state->GetValue();
       }
       pre = next_node;
       
      }
-    
+    latch_.RUnlock();
     return {};
   }
 };
