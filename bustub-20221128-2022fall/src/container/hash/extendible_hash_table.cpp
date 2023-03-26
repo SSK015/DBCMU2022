@@ -63,19 +63,57 @@ template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::GetNumBucketsInternal() const -> int {
   return num_buckets_;
 }
-
+  /**
+   *
+   * TODO(P1): Add implementation
+   *
+   * @brief Find the value associated with the given key.
+   *
+   * Use IndexOf(key) to find the directory index the key hashes to.
+   *
+   * @param key The key to be searched.
+   * @param[out] value The value associated with the key.
+   * @return True if the key is found, false otherwise.
+   */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Find(const K &key, V &value) -> bool {
-  UNREACHABLE("not implemented");
+  
+//  UNREACHABLE("not implemented");
 }
 
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
   UNREACHABLE("not implemented");
 }
-
+  /**
+   *
+   * TODO(P1): Add implementation
+   *
+   * @brief Insert the given key-value pair into the hash table.
+   * If a key already exists, the value should be updated.
+   * If the bucket is full and can't be inserted, do the following steps before retrying:
+   *    1. If the local depth of the bucket is equal to the global depth,
+   *        increment the global depth and double the size of the directory.
+   *    2. Increment the local depth of the bucket.
+   *    3. Split the bucket and redistribute directory pointers & the kv pairs in the bucket.
+   *
+   * @param key The key to be inserted.
+   * @param value The value to be inserted.
+   */
 template <typename K, typename V>
 void ExtendibleHashTable<K, V>::Insert(const K &key, const V &value) {
+  if (key is existed) {
+    old_value = value;
+  } else {
+    while (bucket_size_ == ) {
+      if (GetLocalDepth() == ) {
+
+      }
+      GetLocalDepthInternal;
+
+  //3.
+    }
+  }
   UNREACHABLE("not implemented");
 }
 
