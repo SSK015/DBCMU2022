@@ -77,13 +77,33 @@ auto ExtendibleHashTable<K, V>::GetNumBucketsInternal() const -> int {
    */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Find(const K &key, V &value) -> bool {
-  
+    auto index = IndexOf(key);
+    auto target_bucket = dir_[index];
+    if (Bucket->Find(key, value)) {
+      return true;
+    } else {
+      return false;
+    }
 //  UNREACHABLE("not implemented");
 }
-
+ /**
+     *
+     * TODO(P1): Add implementation
+     *
+     * @brief Given the key, remove the corresponding key-value pair in the bucket.
+     * @param key The key to be deleted.
+     * @return True if the key exists, false otherwise.
+     */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
-  UNREACHABLE("not implemented");
+    auto index = IndexOf(key);
+    auto target_bucket = dir_[index];
+    if (target_bucket->Remove(key)) {
+      return true;
+    } else {
+      return false;
+    }
+//  UNREACHABLE("not implemented");
 }
   /**
    *
@@ -102,18 +122,31 @@ auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
    */
 template <typename K, typename V>
 void ExtendibleHashTable<K, V>::Insert(const K &key, const V &value) {
-  if (key is existed) {
+    auto index = IndexOf(key);
+    auto target_bucket = dir_[index];
+    while (target_bucket->IsFull()) {
+      if (target_bucket->GetDepth() == GetGlobalDepthInternal()) {
+        global_depth_++;
+        int length = dir_.size();
+        dir_.resize(length << 1);
+// why can not I commit?       
+      }
+    }
+/*  if (key is existed) {
     old_value = value;
   } else {
     while (bucket_size_ == ) {
       if (GetLocalDepth() == ) {
 
       }
-      GetLocalDepthInternal;
+      Incre the local depth;
+
 
   //3.
-    }
-  }
+      split the bucket;
+      redistribute;
+   }
+  }*/
   UNREACHABLE("not implemented");
 }
 
@@ -125,17 +158,64 @@ ExtendibleHashTable<K, V>::Bucket::Bucket(size_t array_size, int depth) : size_(
 
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Find(const K &key, V &value) -> bool {
-  UNREACHABLE("not implemented");
+  auto iter = std::find_if(list_.begin(), list_.end(), [target](std::pair<int, int>& p) {
+        return p.first == target;
+    });
+    if (iter != list_.end()) {
+        return true;
+        //std::cout << "The second element of the pair is: " << iter->second << std::endl;
+    } else {
+        return false;  
+//      std::cout << "Element not found." << std::endl;
+    }
+  //UNREACHABLE("not implemented");
 }
-
+/**
+     *
+     * TODO(P1): Add implementation
+     *
+     * @brief Given the key, remove the corresponding key-value pair in the bucket.
+     * @param key The key to be deleted.
+     * @return True if the key exists, false otherwise.
+     */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Remove(const K &key) -> bool {
-  UNREACHABLE("not implemented");
+  V value;
+  if (Find(key, value)) {
+    auto iter = std::find_if(list_.begin(), list_.end(), [key](const auto& p) {
+      return p.first == key;
+    });
+    list_.erase(iter);
+    return true;
+  }
+  return false; 
+  //UNREACHABLE("not implemented");
 }
-
+/**
+     *
+     * TODO(P1): Add implementation
+     *
+     * @brief Insert the given key-value pair into the bucket.
+     *      1. If a key already exists, the value should be updated.
+     *      2. If the bucket is full, do nothing and return false.
+     * @param key The key to be inserted.
+     * @param value The value to be inserted.
+     * @return True if the key-value pair is inserted, false otherwise.
+     */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Insert(const K &key, const V &value) -> bool {
-  UNREACHABLE("not implemented");
+  auto new_value = value;
+  if (Find(key, value)) {
+    //Remove(key);
+    list_.emplace_back(key, new_value);
+    value = new_value;
+  }
+  if (IsFull()) {
+    return false;
+  }
+  return true;
+
+  //UNREACHABLE("not implemented");
 }
 
 template class ExtendibleHashTable<page_id_t, Page *>;
