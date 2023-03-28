@@ -23,7 +23,7 @@ namespace bustub {
 
 template <typename K, typename V>
 ExtendibleHashTable<K, V>::ExtendibleHashTable(size_t bucket_size)
-    : global_depth_(0), bucket_size_(bucket_size), num_buckets_(1) {}
+    : global_depth_(0), bucket_size_(bucket_size), num_buckets_(1) {dir_.push_back(std::make_shared<Bucket>(bucket_size, 0));}
 
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::IndexOf(const K &key) -> size_t {
@@ -79,7 +79,7 @@ template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Find(const K &key, V &value) -> bool {
     auto index = IndexOf(key);
     auto target_bucket = dir_[index];
-    if (Bucket->Find(key, value)) {
+    if (target_bucket->Find(key, value)) {
       return true;
     } else {
       return false;
@@ -122,16 +122,47 @@ auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
    */
 template <typename K, typename V>
 void ExtendibleHashTable<K, V>::Insert(const K &key, const V &value) {
-    auto index = IndexOf(key);
-    auto target_bucket = dir_[index];
-    while (target_bucket->IsFull()) {
+    
+    while (dir_[IndexOf(key)]->IsFull()) {
+      auto index = IndexOf(key);
+      auto target_bucket = dir_[index];
       if (target_bucket->GetDepth() == GetGlobalDepthInternal()) {
         global_depth_++;
         int length = dir_.size();
         dir_.resize(length << 1);
+        for (int i = 0; i < length; ++i) {
+          dir_[i + length] = dir_[i];
+        }
 // why can not I commit?       
       }
+      auto mask = 1 << target_bucket->GetDepth();
+      auto bucket_0 = std::make_shared<Bucket>(bucket_size_, target_bucket->GetDepth() + 1);
+      auto bucket_1 = std::make_shared<Bucket>(bucket_size_, target_bucket->GetDepth() + 1);
+      num_buckets_++;
+      for (const auto &item : target_bucket->GetItems()) {
+        auto hash_key = std::hash<K>()(item.first);
+        if ((hash_key & mask) == 0) {
+          bucket_0->Insert(item.first, item.second);
+
+        } else {
+          bucket_1->Insert(item.first, item.second);
+        }
+      }
+
+      for (size_t i = 0; i < dir_.size(); ++i) {
+        if (dir_[i] == target_bucket) {
+          if ((i & mask) == 0) {
+            dir_[i] = bucket_0;
+          } else {
+            dir_[i] = bucket_1;
+          }
+        }
+      }
     }
+    auto index = IndexOf(key);
+    auto target_bucket = dir_[index];
+    
+    target_bucket->Insert(key, value);
 /*  if (key is existed) {
     old_value = value;
   } else {
@@ -147,7 +178,7 @@ void ExtendibleHashTable<K, V>::Insert(const K &key, const V &value) {
       redistribute;
    }
   }*/
-  UNREACHABLE("not implemented");
+//  UNREACHABLE("not implemented");
 }
 
 //===--------------------------------------------------------------------===//
@@ -158,8 +189,9 @@ ExtendibleHashTable<K, V>::Bucket::Bucket(size_t array_size, int depth) : size_(
 
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Find(const K &key, V &value) -> bool {
-  auto iter = std::find_if(list_.begin(), list_.end(), [target](std::pair<int, int>& p) {
-        return p.first == target;
+    
+  auto iter = std::find_if(list_.begin(), list_.end(), [&key, &value](const auto &item) {
+        return item.first == key;
     });
     if (iter != list_.end()) {
         return true;
@@ -182,7 +214,7 @@ template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Remove(const K &key) -> bool {
   V value;
   if (Find(key, value)) {
-    auto iter = std::find_if(list_.begin(), list_.end(), [key](const auto& p) {
+    auto iter = std::find_if(list_.begin(), list_.end(), [&key, &value](const auto& p) {
       return p.first == key;
     });
     list_.erase(iter);
@@ -204,15 +236,16 @@ auto ExtendibleHashTable<K, V>::Bucket::Remove(const K &key) -> bool {
      */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Insert(const K &key, const V &value) -> bool {
-  auto new_value = value;
-  if (Find(key, value)) {
+  //auto new_value = value;
+//  if (Find(key, value)) {
     //Remove(key);
-    list_.emplace_back(key, new_value);
-    value = new_value;
-  }
+//    list_.emplace_back(key, value);
+    //value = new_value;
+//  }
   if (IsFull()) {
     return false;
   }
+  list_.emplace_back(key, value);
   return true;
 
   //UNREACHABLE("not implemented");
