@@ -77,6 +77,7 @@ auto ExtendibleHashTable<K, V>::GetNumBucketsInternal() const -> int {
    */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Find(const K &key, V &value) -> bool {
+    std::scoped_lock<std::mutex> lock(latch_);
     auto index = IndexOf(key);
     auto target_bucket = dir_[index];
     if (target_bucket->Find(key, value)) {
@@ -96,6 +97,8 @@ auto ExtendibleHashTable<K, V>::Find(const K &key, V &value) -> bool {
      */
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
+    std::scoped_lock<std::mutex> lock(latch_);
+    
     auto index = IndexOf(key);
     auto target_bucket = dir_[index];
     if (target_bucket->Remove(key)) {
@@ -122,6 +125,7 @@ auto ExtendibleHashTable<K, V>::Remove(const K &key) -> bool {
    */
 template <typename K, typename V>
 void ExtendibleHashTable<K, V>::Insert(const K &key, const V &value) {
+    std::scoped_lock<std::mutex> lock(latch_);
     
     while (dir_[IndexOf(key)]->IsFull()) {
       auto index = IndexOf(key);
@@ -189,17 +193,26 @@ ExtendibleHashTable<K, V>::Bucket::Bucket(size_t array_size, int depth) : size_(
 
 template <typename K, typename V>
 auto ExtendibleHashTable<K, V>::Bucket::Find(const K &key, V &value) -> bool {
-    
-  auto iter = std::find_if(list_.begin(), list_.end(), [&key, &value](const auto &item) {
-        return item.first == key;
+    //auto v = value;
+  return std::any_of(list_.begin(), list_.end(), [&key, &value](const auto &item) {
+  //      v = item.second;
+        if (item.first == key) {
+          value = item.second;
+          return true; 
+        } else {
+          return false;
+        }
     });
-    if (iter != list_.end()) {
+    /*if (iter != list_.end()) {
+        value = v;
         return true;
+
         //std::cout << "The second element of the pair is: " << iter->second << std::endl;
     } else {
-        return false;  
+        return false;
+        */  
 //      std::cout << "Element not found." << std::endl;
-    }
+    
   //UNREACHABLE("not implemented");
 }
 /**
