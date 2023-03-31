@@ -140,7 +140,13 @@ class LRUKReplacer {
   size_t replacer_size_;
   [[maybe_unused]] size_t k_;
   std::mutex latch_;
+  std::list<frame_id_t> pool_cache_list_;
+  std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> pool_cache_index_;
+//  std::list<frame_id_t> pool_cache_list;
+  std::list<frame_id_t> outer_list_;
+  std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> outer_index_;
   std::unordered_map<frame_id_t, bool> Evictable_;
+  std::unordered_map<frame_id_t, size_t> access_record_;
   //std::unordered_map
 };
 

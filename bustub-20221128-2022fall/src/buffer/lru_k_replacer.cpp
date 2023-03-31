@@ -46,7 +46,33 @@ auto LRUKReplacer::Evict(frame_id_t *frame_id) -> bool {
    *
    * @param frame_id id of frame that received a new access.
    */
-void LRUKReplacer::RecordAccess(frame_id_t frame_id) {}
+void LRUKReplacer::RecordAccess(frame_id_t frame_id) {
+    if (frame_id > static_cast<int>(replacer_size_)) {
+        throw std::exception();
+    }
+    access_record_[frame_id]++;
+
+    if (access_record_[frame_id] < k_) {
+        //if (access_record_[frame_id] == 0) {
+        if (outer_index_.count(frame_id) == 0U) {
+            outer_list_.push_front(frame_id);
+            outer_index_[frame_id] = outer_list_.begin();
+        }
+    } else if (access_record_[frame_id] == k_) {
+        auto iter = outer_index_[frame_id];
+        outer_list_.erase(iter);
+        outer_index_.erase(frame_id);
+        pool_cache_list_.push_front(frame_id);
+        pool_cache_index_[frame_id] = pool_cache_list_.front();
+    } else {
+        if (pool_cache_index_.count(frame_id) != 0U) {
+            auto iter = pool_cache_index_[frame_id];
+            pool_cache_list_.erase(frame_id);
+        }
+        pool_cache_list_.push_front(frame_id);
+        pool_cache_index_[frame_id] = pool_cache_list_.begin();
+    }
+}
 /**
    * TODO(P1): Add implementation
    *
