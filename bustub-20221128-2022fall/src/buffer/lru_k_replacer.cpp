@@ -32,8 +32,37 @@ LRUKReplacer::LRUKReplacer(size_t num_frames, size_t k) : replacer_size_(num_fra
    * @return true if a frame is evicted successfully, false if no frames can be evicted.
    */
 auto LRUKReplacer::Evict(frame_id_t *frame_id) -> bool { 
+    std::scoped_lock<std::mutex> lock(latch_);
     if (curr_size_ == 0) return false;
-    
+
+    for (auto iter = outer_list_.rbegin(); iter != outer_list_.rend(); iter++) {
+        auto frame = *iter;
+        if (Evictable_[frame]) {
+            access_record_[frame] = 0;
+            outer_list_.erase(outer_index_[frame]);
+            outer_index_.erase(frame);
+            *frame_id = frame;
+            curr_size_--;
+            Evictable_[frame] = false;
+            return true;
+        }
+    }
+
+    for (auto iter = pool_cache_list_.rbegin(); iter != pool_cache_list_.rend(); iter++) {
+        auto frame = *iter;
+
+        if (Evictable_[frame]) {
+            access_record_[frame] = 0;
+            pool_cache_list_.erase(pool_cache_index_[frame]);
+            pool_cache_index_.erase(frame);
+            *frame_id = frame;
+            curr_size_--;
+            Evictable_[frame] = false;
+            return true;
+        }
+    }
+
+    return false;
 }
   /**
    * TODO(P1): Add implementation
@@ -47,6 +76,8 @@ auto LRUKReplacer::Evict(frame_id_t *frame_id) -> bool {
    * @param frame_id id of frame that received a new access.
    */
 void LRUKReplacer::RecordAccess(frame_id_t frame_id) {
+    std::scoped_lock<std::mutex> lock(latch_);
+
     if (frame_id > static_cast<int>(replacer_size_)) {
         throw std::exception();
     }
@@ -63,11 +94,11 @@ void LRUKReplacer::RecordAccess(frame_id_t frame_id) {
         outer_list_.erase(iter);
         outer_index_.erase(frame_id);
         pool_cache_list_.push_front(frame_id);
-        pool_cache_index_[frame_id] = pool_cache_list_.front();
+        pool_cache_index_[frame_id] = pool_cache_list_.begin();
     } else {
         if (pool_cache_index_.count(frame_id) != 0U) {
             auto iter = pool_cache_index_[frame_id];
-            pool_cache_list_.erase(frame_id);
+            pool_cache_list_.erase(iter);
         }
         pool_cache_list_.push_front(frame_id);
         pool_cache_index_[frame_id] = pool_cache_list_.begin();
@@ -91,9 +122,12 @@ void LRUKReplacer::RecordAccess(frame_id_t frame_id) {
    * @param set_evictable whether the given frame is evictable or not
    */
 void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) {
-    if (frame_id > replacer_size_) {
+    std::scoped_lock<std::mutex> lock(latch_);
+
+    if (frame_id > static_cast<int>(replacer_size_)) {
         throw std::exception();
     }
+    if (access_record_[frame_id] == 0) return;
     if (Evictable_[frame_id] && set_evictable == false) {
         curr_size_--;
         Evictable_[frame_id] = false;
@@ -122,9 +156,35 @@ void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) {
    *
    * @param frame_id id of frame to be removed
    */
-void LRUKReplacer::Remove(frame_id_t frame_id) {}
+void LRUKReplacer::Remove(frame_id_t frame_id) {
+    std::scoped_lock<std::mutex> lock(latch_);
+
+    if (frame_id > static_cast<int>(replacer_size_)) {
+        throw std::exception();
+    }
+    auto cnt = access_record_[frame_id];
+    if (cnt == 0) {
+        return ;
+    }
+    if (Evictable_[frame_id] == false) {
+        throw std::exception();
+    }
+    if (cnt < k_) {
+        outer_list_.erase(outer_index_[frame_id]);
+        outer_index_.erase(frame_id);
+    } else {
+        pool_cache_list_.erase(pool_cache_index_[frame_id]);
+        pool_cache_index_.erase(frame_id);
+    }
+
+    curr_size_--;
+    access_record_[frame_id] = 0;
+    Evictable_[frame_id] = false;
+
+}
 
 auto LRUKReplacer::Size() -> size_t { 
+    std::scoped_lock<std::mutex> lock(latch_);
     return curr_size_; 
     }
 
