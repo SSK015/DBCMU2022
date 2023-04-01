@@ -42,7 +42,21 @@ BufferPoolManagerInstance::~BufferPoolManagerInstance() {
   delete replacer_;
 }
 
-auto BufferPoolManagerInstance::NewPgImp(page_id_t *page_id) -> Page * { return nullptr; }
+auto BufferPoolManagerInstance::NewPgImp(page_id_t *page_id) -> Page * { 
+  
+  bool free_page = false;
+  for (size_t i = 0; i < pool_size_; ++i) {
+    if (pages_[i].GetPinCount() == 0) {
+      free_page = true;
+      break;
+    }
+  }
+  if (!free_page) {
+    return nullptr;
+  }
+  *page_id = AllocatePage();
+  
+}
 
 auto BufferPoolManagerInstance::FetchPgImp(page_id_t page_id) -> Page * { return nullptr; }
 
