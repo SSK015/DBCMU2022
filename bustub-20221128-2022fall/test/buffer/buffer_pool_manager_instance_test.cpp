@@ -135,6 +135,8 @@ TEST(BufferPoolManagerInstanceTest, SampleTest) {
   // now be pinned. Fetching page 0 should fail.
   EXPECT_EQ(true, bpm->UnpinPage(0, true));
   EXPECT_NE(nullptr, bpm->NewPage(&page_id_temp));
+//  std::cout << bpm->FetchPage(0)->GetData() << std::endl;
+//  std::cout << 1 << std::endl;
   EXPECT_EQ(nullptr, bpm->FetchPage(0));
 
   // Shutdown the disk manager and remove the temporary file we created.

@@ -87,7 +87,7 @@ auto BufferPoolManagerInstance::NewPgImp(page_id_t *page_id) -> Page * {
     }
     pages_[frame_id].ResetMemory();
 
-    page_table_->Remove(frame_id);
+    page_table_->Remove(evicted_page_id);
 
   }
   page_table_->Insert(*page_id, frame_id);
@@ -132,10 +132,12 @@ auto BufferPoolManagerInstance::FetchPgImp(page_id_t page_id) -> Page * {
   //std::cout << pool_size_ << std::endl;
   for (size_t i = 0; i < pool_size_; ++i) {
     if (pages_[i].GetPinCount() == 0) {
+ //     std::cout << i << std::endl;
       free_page = true;
       break;
     }
   }
+  //std::cout << free_page << std::endl;
   if (!free_page) {
     return nullptr;
   }
@@ -287,9 +289,10 @@ auto BufferPoolManagerInstance::DeletePgImp(page_id_t page_id) -> bool {
   free_list_.push_back(frame_id);
 
   DeallocatePage(page_id);
-  return false;
+  return true;
 }
 
 auto BufferPoolManagerInstance::AllocatePage() -> page_id_t { return next_page_id_++; }
 
 }  // namespace bustub
+
