@@ -1,0 +1,146 @@
+[2023-04-05 21:35:52.161] [exthost] [info] Extension host with pid 120688 started
+[2023-04-05 21:35:52.204] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:35:52.212] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:35:56.413] [exthost] [info] Eager extensions activated
+[2023-04-05 21:35:56.506] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-05 21:35:56.872] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-05 21:36:07.306] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:36:07.314] [exthost] [info] Extension host with pid 120688 exiting with code 0
+[2023-04-05 21:36:09.164] [exthost] [info] Extension host with pid 120725 started
+[2023-04-05 21:36:09.165] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/82bed702a6c51cb1263db4991cf2e8dd.
+[2023-04-05 21:36:09.188] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-05 21:36:09.196] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:36:09.256] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:36:13.345] [exthost] [info] Eager extensions activated
+[2023-04-05 21:36:13.372] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-05 21:36:13.846] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-05 21:36:51.700] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-05 22:41:27.689] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-05 23:41:39.539] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:41:44.855] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:41:50.114] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:42:00.357] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:42:10.644] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:42:20.920] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:42:31.193] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:42:41.481] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:43:11.760] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:43:42.050] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:44:12.357] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:44:42.714] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:45:13.023] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:45:43.323] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:46:13.663] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:46:44.021] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:47:14.359] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 23:47:44.678] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:47:30.553] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:48:01.212] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:48:31.700] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:49:02.033] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:49:32.368] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:50:21.537] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 10:50:21.549] [exthost] [info] Extension host with pid 120725 exiting with code 0
+[2023-04-06 10:50:24.097] [exthost] [info] Extension host with pid 124886 started
+[2023-04-06 10:50:24.097] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/82bed702a6c51cb1263db4991cf2e8dd.
+[2023-04-06 10:50:24.146] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 10:50:24.157] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 10:50:24.238] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:50:29.929] [exthost] [info] Eager extensions activated
+[2023-04-06 10:50:29.956] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 10:50:31.426] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-06 10:50:45.178] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 10:50:45.184] [exthost] [info] Extension host with pid 124886 exiting with code 0
+[2023-04-06 10:50:47.547] [exthost] [info] Extension host with pid 124936 started
+[2023-04-06 10:50:47.547] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/ee08aaf8ff443edfe34a11d40cccf3f0.
+[2023-04-06 10:50:47.606] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 10:50:47.620] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 10:50:47.710] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 10:50:57.232] [exthost] [info] Eager extensions activated
+[2023-04-06 10:50:57.267] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 10:50:57.290] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 10:51:00.238] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-06 11:45:45.815] [exthost] [info] ExtensionService#_doActivateExtension vscode.image-preview, startup: false, activationEvent: 'onCustomEditor:imagePreview.previewEditor'
+[2023-04-06 12:57:25.767] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:57:31.470] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:57:36.785] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:57:47.116] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:57:57.483] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:58:07.852] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:58:18.233] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:58:28.596] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:58:58.984] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:23.178] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 12:59:23.201] [exthost] [info] Extension host with pid 124936 exiting with code 0
+[2023-04-06 12:59:26.282] [exthost] [info] Extension host with pid 126448 started
+[2023-04-06 12:59:26.283] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/ee08aaf8ff443edfe34a11d40cccf3f0.
+[2023-04-06 12:59:26.331] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 12:59:26.349] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 12:59:26.444] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:27.054] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:27.845] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:28.325] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:28.672] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:29.598] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2023-04-06 12:59:29.624] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 12:59:29.652] [exthost] [info] Eager extensions activated
+[2023-04-06 12:59:29.701] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-06 12:59:37.263] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 12:59:37.273] [exthost] [info] Extension host with pid 126448 exiting with code 0
+[2023-04-06 12:59:39.402] [exthost] [info] Extension host with pid 126632 started
+[2023-04-06 12:59:39.402] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/ee08aaf8ff443edfe34a11d40cccf3f0.
+[2023-04-06 12:59:39.449] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 12:59:39.459] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 12:59:39.535] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 12:59:44.288] [exthost] [info] Eager extensions activated
+[2023-04-06 12:59:44.331] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 12:59:45.885] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-06 14:42:17.036] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:04:46.764] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:10:12.192] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:10:34.288] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:10:56.440] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:11:23.548] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:11:50.705] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 15:12:17.878] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:39:17.932] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:39:23.833] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:39:29.143] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:39:39.507] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:39:49.784] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:40:00.220] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:40:10.474] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:40:20.781] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:40:51.070] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:41:21.387] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:41:51.707] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:08.084] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:11.595] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:13.482] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 22:42:13.494] [exthost] [info] Extension host with pid 126632 exiting with code 0
+[2023-04-06 22:42:15.860] [exthost] [info] Extension host with pid 128909 started
+[2023-04-06 22:42:15.860] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/ee08aaf8ff443edfe34a11d40cccf3f0.
+[2023-04-06 22:42:15.927] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 22:42:15.942] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 22:42:16.012] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:16.317] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:16.659] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:17.052] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:17.342] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:18.264] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2023-04-06 22:42:18.284] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 22:42:18.314] [exthost] [info] Eager extensions activated
+[2023-04-06 22:42:18.354] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-06 22:42:34.761] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-06 22:42:34.767] [exthost] [info] Extension host with pid 128909 exiting with code 0
+[2023-04-06 22:42:36.577] [exthost] [info] Extension host with pid 129089 started
+[2023-04-06 22:42:36.577] [exthost] [info] Skipping acquiring lock for /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/workspaceStorage/ee08aaf8ff443edfe34a11d40cccf3f0.
+[2023-04-06 22:42:36.609] [exthost] [info] $getCanonicalURI invoked for authority (ssh-remote)
+[2023-04-06 22:42:36.618] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-06 22:42:36.667] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-06 22:42:41.227] [exthost] [info] Eager extensions activated
+[2023-04-06 22:42:41.265] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-06 22:42:42.219] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-07 11:42:20.917] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-07 11:45:10.220] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-07 11:45:10.243] [exthost] [info] Extension host with pid 129089 exiting with code 0

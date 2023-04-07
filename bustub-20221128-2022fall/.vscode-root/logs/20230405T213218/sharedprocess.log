@@ -1,0 +1,35 @@
+[2023-04-05 21:32:23.930] [sharedprocess] [error] RequestService#request (browser) - error https://az764295.vo.msecnd.net/extensions/marketplace.json {"name":"Offline"}
+[2023-04-05 21:32:25.280] [sharedprocess] [info] Starting worker process with pid 120156 (type: fileWatcher, window: 1).
+[2023-04-05 21:32:59.547] [sharedprocess] [info] Starting worker process with pid 120209 (type: fileWatcher, window: 3).
+[2023-04-05 21:33:05.345] [sharedprocess] [info] Worker process with pid 120209 terminated normally (type: fileWatcher, window: 3).
+[2023-04-05 21:33:06.917] [sharedprocess] [info] Starting worker process with pid 120286 (type: fileWatcher, window: 3).
+[2023-04-05 21:34:36.869] [sharedprocess] [info] Worker process with pid 120286 terminated normally (type: fileWatcher, window: 3).
+[2023-04-05 21:34:38.648] [sharedprocess] [info] Starting worker process with pid 120510 (type: fileWatcher, window: 3).
+[2023-04-05 21:35:01.485] [sharedprocess] [info] Worker process with pid 120510 terminated normally (type: fileWatcher, window: 3).
+[2023-04-05 21:35:03.424] [sharedprocess] [info] Starting worker process with pid 120574 (type: fileWatcher, window: 3).
+[2023-04-05 21:35:22.266] [sharedprocess] [info] Worker process with pid 120574 terminated normally (type: fileWatcher, window: 3).
+[2023-04-05 21:35:24.373] [sharedprocess] [info] Starting worker process with pid 120623 (type: fileWatcher, window: 3).
+[2023-04-05 21:35:51.644] [sharedprocess] [info] Starting worker process with pid 120687 (type: fileWatcher, window: 4).
+[2023-04-05 21:36:07.324] [sharedprocess] [info] Worker process with pid 120687 terminated normally (type: fileWatcher, window: 4).
+[2023-04-05 21:36:08.671] [sharedprocess] [info] Starting worker process with pid 120724 (type: fileWatcher, window: 4).
+[2023-04-05 21:48:09.181] [sharedprocess] [info] Worker process with pid 120156 terminated normally (type: fileWatcher, window: 1).
+[2023-04-05 21:48:18.419] [sharedprocess] [info] Worker process with pid 120623 terminated normally (type: fileWatcher, window: 3).
+[2023-04-05 23:41:19.436] [sharedprocess] [error] RequestService#request (browser) - error https://az764295.vo.msecnd.net/extensions/marketplace.json {"name":"Offline"}
+[2023-04-06 10:50:21.581] [sharedprocess] [info] Worker process with pid 120724 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 10:50:24.625] [sharedprocess] [info] Starting worker process with pid 124910 (type: fileWatcher, window: 4).
+[2023-04-06 10:50:45.210] [sharedprocess] [info] Worker process with pid 124910 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 10:50:47.064] [sharedprocess] [info] Starting worker process with pid 124937 (type: fileWatcher, window: 4).
+[2023-04-06 12:57:05.599] [sharedprocess] [error] RequestService#request (browser) - error https://az764295.vo.msecnd.net/extensions/marketplace.json {"name":"Offline"}
+[2023-04-06 12:59:23.256] [sharedprocess] [info] Worker process with pid 124937 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 12:59:26.606] [sharedprocess] [info] Starting worker process with pid 126466 (type: fileWatcher, window: 4).
+[2023-04-06 12:59:37.319] [sharedprocess] [info] Worker process with pid 126466 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 12:59:40.244] [sharedprocess] [info] Starting worker process with pid 126658 (type: fileWatcher, window: 4).
+[2023-04-06 22:42:13.520] [sharedprocess] [info] Worker process with pid 126658 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 22:42:16.562] [sharedprocess] [error] RequestService#request (browser) - error https://az764295.vo.msecnd.net/extensions/marketplace.json {"name":"Offline"}
+[2023-04-06 22:42:16.566] [sharedprocess] [info] Starting worker process with pid 128944 (type: fileWatcher, window: 4).
+[2023-04-06 22:42:34.793] [sharedprocess] [info] Worker process with pid 128944 terminated normally (type: fileWatcher, window: 4).
+[2023-04-06 22:42:37.675] [sharedprocess] [info] Starting worker process with pid 129115 (type: fileWatcher, window: 4).
+[2023-04-06 22:42:56.577] [sharedprocess] [info] Starting worker process with pid 129147 (type: fileWatcher, window: 5).
+[2023-04-06 22:43:56.484] [sharedprocess] [info] Starting worker process with pid 129237 (type: fileWatcher, window: 6).
+[2023-04-07 11:45:10.296] [sharedprocess] [info] Worker process with pid 129237 terminated normally (type: fileWatcher, window: 6).
+[2023-04-07 11:45:10.364] [sharedprocess] [info] Worker process with pid 129115 terminated normally (type: fileWatcher, window: 4).

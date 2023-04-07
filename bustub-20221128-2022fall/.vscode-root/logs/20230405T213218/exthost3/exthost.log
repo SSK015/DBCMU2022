@@ -1,0 +1,51 @@
+[2023-04-05 21:33:00.194] [exthost] [info] Extension host with pid 120210 started
+[2023-04-05 21:33:00.255] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:00.276] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:33:00.959] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:01.324] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:01.616] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:01.907] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:02.900] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2023-04-05 21:33:02.957] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-05 21:33:03.008] [exthost] [info] Eager extensions activated
+[2023-04-05 21:33:03.176] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-05 21:33:05.318] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:33:05.332] [exthost] [info] Extension host with pid 120210 exiting with code 0
+[2023-04-05 21:33:07.457] [exthost] [info] Extension host with pid 120287 started
+[2023-04-05 21:33:07.480] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:07.487] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:33:07.974] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:08.268] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:08.538] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:08.831] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:33:09.799] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2023-04-05 21:33:09.844] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-05 21:33:09.885] [exthost] [info] Eager extensions activated
+[2023-04-05 21:33:10.028] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-05 21:34:36.843] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:34:36.849] [exthost] [info] Extension host with pid 120287 exiting with code 0
+[2023-04-05 21:34:39.277] [exthost] [info] Extension host with pid 120511 started
+[2023-04-05 21:34:39.328] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:34:39.343] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:34:54.849] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:35:01.459] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:35:01.461] [exthost] [info] Extension host with pid 120511 exiting with code 0
+[2023-04-05 21:35:03.917] [exthost] [info] Extension host with pid 120575 started
+[2023-04-05 21:35:03.934] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:35:03.943] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-ssh, startup: false, activationEvent: 'onResolveRemoteAuthority:ssh-remote'
+[2023-04-05 21:35:19.545] [exthost] [info] $resolveAuthority invoked for authority (ssh-remote)
+[2023-04-05 21:35:22.242] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:35:22.243] [exthost] [info] Extension host with pid 120575 exiting with code 0
+[2023-04-05 21:35:25.138] [exthost] [info] Extension host with pid 120624 started
+[2023-04-05 21:35:25.269] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2023-04-05 21:35:25.296] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2023-04-05 21:35:25.300] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2023-04-05 21:35:25.304] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2023-04-05 21:35:25.335] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2023-04-05 21:35:25.386] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2023-04-05 21:35:25.568] [exthost] [info] Eager extensions activated
+[2023-04-05 21:35:25.569] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2023-04-05 21:35:25.606] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2023-04-05 21:35:25.618] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2023-04-05 21:48:18.390] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2023-04-05 21:48:18.404] [exthost] [info] Extension host with pid 120624 exiting with code 0

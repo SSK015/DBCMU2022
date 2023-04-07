@@ -1,0 +1,1269 @@
+[21:36:09.231] Log Level: 2
+[21:36:09.233] remote-ssh@0.90.1
+[21:36:09.233] linux x64
+[21:36:09.257] SSH Resolver called for "ssh-remote+hust02", attempt 1
+[21:36:09.258] "remote.SSH.useLocalServer": true
+[21:36:09.258] "remote.SSH.path": undefined
+[21:36:09.259] "remote.SSH.configFile": undefined
+[21:36:09.259] "remote.SSH.useFlock": true
+[21:36:09.259] "remote.SSH.lockfilesInTmp": false
+[21:36:09.260] "remote.SSH.localServerDownload": auto
+[21:36:09.260] "remote.SSH.remoteServerListenOnSocket": false
+[21:36:09.260] "remote.SSH.showLoginTerminal": false
+[21:36:09.260] "remote.SSH.defaultExtensions": []
+[21:36:09.260] "remote.SSH.loglevel": 2
+[21:36:09.260] "remote.SSH.enableDynamicForwarding": true
+[21:36:09.260] "remote.SSH.enableRemoteCommand": false
+[21:36:09.261] "remote.SSH.serverPickPortsFromRange": {}
+[21:36:09.261] "remote.SSH.serverInstallPath": {}
+[21:36:09.271] SSH Resolver called for host: hust02
+[21:36:09.271] Setting up SSH remote "hust02"
+[21:36:09.278] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[21:36:09.283] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[21:36:09.284] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[21:36:09.292] Install and start server if needed
+[21:36:09.301] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[21:36:09.301] Checking ssh with "ssh -V"
+[21:36:09.321] > OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+
+[21:36:09.353] askpass server listening on /tmp/vscode-ssh-askpass-11166913c4ebd4d46dfca5d723633f212c39c5b6.sock
+[21:36:09.353] Spawning local server with {"serverId":1,"ipcHandlePath":"/tmp/vscode-ssh-askpass-87996524ee323962eabbd1b9cdc225f9a95c9204.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","39109","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[21:36:09.354] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-11166913c4ebd4d46dfca5d723633f212c39c5b6.sock"}
+[21:36:09.364] Spawned 120750
+[21:36:09.577] > local-server-1> Spawned ssh, pid=120758
+[21:36:09.586] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[21:36:09.847] stderr> debug1: Server host key: ecdsa-sha2-nistp256 SHA256:RTYGHnJ48YY8z0RysizPpTP0ShpOGWw9u4R5abt086k
+[21:36:10.256] stderr> Authenticated to xz-ct1.cloudiplc.com ([221.229.197.235]:39234).
+[21:36:10.974] > Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-136-generic x86_64)
+> 
+>  * Documentation:  https://help.ubuntu.com
+>  * Management:     https://landscape.canonical.com
+>  * Support:        https://ubuntu.com/advantage
+> 
+>   System information as of Wed 05 Apr 2023 09:36:10 PM CST
+> 
+>   System load:  0.24                Processes:                   1497
+>   Usage of /:   47.3% of 889.17GB   Users logged in:             2
+>   Memory usage: 4%                  IPv4 address for ens25f0:    172.16.9.234
+>   Swap usage:   0%                  IPv4 address for ztc25kybwp: 10.144.184.215
+>   Temperature:  46.0 C              IPv4 address for ztc25kybwp: 10.144.39.234
+> 
+>  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+>    just raised the bar for easy, resilient and secure K8s cluster deployment.
+> 
+>    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+> 
+> 176 updates can be applied immediately.
+> 8 of these updates are standard security updates.
+> To see these additional updates run: apt list --upgradable
+> 
+> New release '22.04.2 LTS' available.
+> Run 'do-release-upgrade' to upgrade to it.
+> 
+> 
+> 1 updates could not be installed automatically. For more details,
+> see /var/log/unattended-upgrades/unattended-upgrades.log
+> Your Hardware Enablement Stack (HWE) is supported until April 2025.
+> 
+> *** System restart required ***
+[21:36:11.050] > ready: c0cbced85c5e
+[21:36:11.101] > Linux 5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+[21:36:11.102] Platform: linux
+[21:36:11.156] > /bin/bash
+[21:36:11.157] Shell: bash
+[21:36:11.157] Creating bash subshell inside "bash"
+[21:36:11.265] > bash version:  5.0.17(1)-release
+[21:36:11.308] > bash version:  5.0.17(1)-release
+[21:36:11.373] > bash version:  5.0.17(1)-release
+[21:36:11.514] > c0cbced85c5e: running
+> Acquiring lock on /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/vscode-remote-lock.xyw.784b0177c56c607789f9638da7b6bf3230d47a8c
+> Found existing installation at /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c...
+> Checking /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log and /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.pid for a running server
+> Looking for server with pid: 2439628
+[21:36:11.589] > Found running server...
+>  
+> *
+> * Reminder: You may only use this software with Visual Studio family products,
+> * as described in the license (https://go.microsoft.com/fwlink/?linkid=2077057)
+> *
+>  
+> Checking server status on port 36425 with wget
+> c0cbced85c5e: start
+> SSH_AUTH_SOCK====
+> DISPLAY====
+> webUiAccessToken====
+> listeningOn==36425==
+> osReleaseId==ubuntu==
+> arch==x86_64==
+> tmpDir==/run/user/1001==
+> platform==linux==
+> unpackResult====
+> didLocalDownload==0==
+> downloadTime====
+> installTime====
+> extInstallTime====
+> serverStartTime====
+> connectionToken==11aaaa11-1111-11a1-1111-aa1a1a11a1a1==
+> c0cbced85c5e: end
+[21:36:11.590] Received install output: 
+SSH_AUTH_SOCK====
+DISPLAY====
+webUiAccessToken====
+listeningOn==36425==
+osReleaseId==ubuntu==
+arch==x86_64==
+tmpDir==/run/user/1001==
+platform==linux==
+unpackResult====
+didLocalDownload==0==
+downloadTime====
+installTime====
+extInstallTime====
+serverStartTime====
+connectionToken==11aaaa11-1111-11a1-1111-aa1a1a11a1a1==
+
+[21:36:11.591] Remote server is listening on 36425
+[21:36:11.591] Parsed server configuration: {"serverConfiguration":{"remoteListeningOn":{"port":36425},"osReleaseId":"ubuntu","arch":"x86_64","webUiAccessToken":"","sshAuthSock":"","display":"","tmpDir":"/run/user/1001","platform":"linux","connectionToken":"11aaaa11-1111-11a1-1111-aa1a1a11a1a1"},"installUnpackCode":""}
+[21:36:11.593] Persisting server connection details to /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[21:36:11.599] Starting forwarding server. localPort 39351 -> socksPort 39109 -> remotePort 36425
+[21:36:11.600] Forwarding server listening on 39351
+[21:36:11.600] Waiting for ssh tunnel to be ready
+[21:36:11.601] [Forwarding server 39351] Got connection 0
+[21:36:11.604] Tunneled 36425 to local port 39351
+[21:36:11.604] Resolved "ssh-remote+hust02" to "127.0.0.1:39351"
+[21:36:11.625] ------
+
+
+
+
+[21:36:11.657] [Forwarding server 39351] Got connection 1
+[21:36:11.888] [Forwarding server 39351] Got connection 2
+[23:41:39.544] ------
+
+
+
+
+[23:41:39.544] SSH Resolver called for "ssh-remote+hust02", attempt 2, (Reconnection)
+[23:41:39.552] SSH Resolver called for host: hust02
+[23:41:39.552] Setting up SSH remote "hust02"
+[23:41:39.558] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:41:39.559] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:41:39.562] Found local server running: {"remoteListeningOn":{"port":36425},"osReleaseId":"ubuntu","arch":"x86_64","webUiAccessToken":"","sshAuthSock":"","display":"","tmpDir":"/run/user/1001","platform":"linux","connectionToken":"11aaaa11-1111-11a1-1111-aa1a1a11a1a1","pid":120750,"ipcHandlePath":"/tmp/vscode-ssh-askpass-87996524ee323962eabbd1b9cdc225f9a95c9204.sock","socksPort":39109,"startupTime":1680701769365}
+[23:41:39.564] Running server is stale. Ignoring
+[23:41:39.565] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:41:39.577] Install and start server if needed
+[23:41:39.587] askpass server listening on /tmp/vscode-ssh-askpass-c16416ca20494376d2cc2a8ed2ce3174de5f1637.sock
+[23:41:39.587] Spawning local server with {"serverId":2,"ipcHandlePath":"/tmp/vscode-ssh-askpass-a418ef2ca328b42c43bfa8bd12d4982838f9f82b.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","36773","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:41:39.588] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-c16416ca20494376d2cc2a8ed2ce3174de5f1637.sock"}
+[23:41:39.601] Spawned 123790
+[23:41:39.788] > local-server-2> Spawned ssh, pid=123798
+[23:41:39.793] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:41:39.794] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:41:39.795] > local-server-2> ssh child died, shutting down
+[23:41:39.809] Local server exit: 0
+[23:41:39.810] Received install output: local-server-2> Spawned ssh, pid=123798
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-2> ssh child died, shutting down
+
+[23:41:39.820] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:41:39.836] ------
+
+
+
+
+[23:41:44.012] > local-server-1> Timed out
+[23:41:44.026] Local server exit: 0
+[23:41:44.856] ------
+
+
+
+
+[23:41:44.856] SSH Resolver called for "ssh-remote+hust02", attempt 3, (Reconnection)
+[23:41:44.859] SSH Resolver called for host: hust02
+[23:41:44.859] Setting up SSH remote "hust02"
+[23:41:44.860] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:41:44.862] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:41:44.862] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:41:44.868] Install and start server if needed
+[23:41:44.877] askpass server listening on /tmp/vscode-ssh-askpass-a260f2746a6a3b0c1d7ed19c0d52fff4ecfa3e5a.sock
+[23:41:44.878] Spawning local server with {"serverId":3,"ipcHandlePath":"/tmp/vscode-ssh-askpass-958093da172ec51c1efb79df6b46d1b5658e9186.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","39007","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:41:44.879] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-a260f2746a6a3b0c1d7ed19c0d52fff4ecfa3e5a.sock"}
+[23:41:44.892] Spawned 123801
+[23:41:45.071] > local-server-3> Spawned ssh, pid=123809
+[23:41:45.080] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:41:45.084] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:41:45.084] > local-server-3> ssh child died, shutting down
+[23:41:45.093] Local server exit: 0
+[23:41:45.093] Received install output: local-server-3> Spawned ssh, pid=123809
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-3> ssh child died, shutting down
+
+[23:41:45.095] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:41:45.099] ------
+
+
+
+
+[23:41:50.114] ------
+
+
+
+
+[23:41:50.116] SSH Resolver called for "ssh-remote+hust02", attempt 4, (Reconnection)
+[23:41:50.118] SSH Resolver called for host: hust02
+[23:41:50.118] Setting up SSH remote "hust02"
+[23:41:50.121] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:41:50.121] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:41:50.122] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:41:50.127] Install and start server if needed
+[23:41:50.135] askpass server listening on /tmp/vscode-ssh-askpass-8b7e4f395222c34d19915bd5485f7a3c5cb51273.sock
+[23:41:50.135] Spawning local server with {"serverId":4,"ipcHandlePath":"/tmp/vscode-ssh-askpass-ca2d89b0645fc3c7aa3986730439e10700302260.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","37001","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:41:50.135] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-8b7e4f395222c34d19915bd5485f7a3c5cb51273.sock"}
+[23:41:50.144] Spawned 123811
+[23:41:50.317] > local-server-4> Spawned ssh, pid=123819
+[23:41:50.323] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:41:50.324] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:41:50.325] > local-server-4> ssh child died, shutting down
+[23:41:50.336] Local server exit: 0
+[23:41:50.336] Received install output: local-server-4> Spawned ssh, pid=123819
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-4> ssh child died, shutting down
+
+[23:41:50.338] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:41:50.347] ------
+
+
+
+
+[23:42:00.358] ------
+
+
+
+
+[23:42:00.358] SSH Resolver called for "ssh-remote+hust02", attempt 5, (Reconnection)
+[23:42:00.360] SSH Resolver called for host: hust02
+[23:42:00.360] Setting up SSH remote "hust02"
+[23:42:00.362] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:42:00.364] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:42:00.365] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:42:00.370] Install and start server if needed
+[23:42:00.378] askpass server listening on /tmp/vscode-ssh-askpass-886b42c259466ac199f4e4ac232e42887a52fd57.sock
+[23:42:00.378] Spawning local server with {"serverId":5,"ipcHandlePath":"/tmp/vscode-ssh-askpass-691ee1a3512301aecc57fade86a7235adcf57df2.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","45267","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:42:00.378] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-886b42c259466ac199f4e4ac232e42887a52fd57.sock"}
+[23:42:00.386] Spawned 123823
+[23:42:00.563] > local-server-5> Spawned ssh, pid=123831
+[23:42:00.573] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:42:00.577] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:42:00.577] > local-server-5> ssh child died, shutting down
+[23:42:00.590] Local server exit: 0
+[23:42:00.591] Received install output: local-server-5> Spawned ssh, pid=123831
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-5> ssh child died, shutting down
+
+[23:42:00.593] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:42:00.597] ------
+
+
+
+
+[23:42:10.644] ------
+
+
+
+
+[23:42:10.646] SSH Resolver called for "ssh-remote+hust02", attempt 6, (Reconnection)
+[23:42:10.648] SSH Resolver called for host: hust02
+[23:42:10.648] Setting up SSH remote "hust02"
+[23:42:10.650] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:42:10.652] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:42:10.652] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:42:10.657] Install and start server if needed
+[23:42:10.664] askpass server listening on /tmp/vscode-ssh-askpass-a3eced922e577a1cdd65e59a61e0d7c8744a0fc1.sock
+[23:42:10.664] Spawning local server with {"serverId":6,"ipcHandlePath":"/tmp/vscode-ssh-askpass-77db0f0bc8d2710494ea978a7ae90473698d511d.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","41837","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:42:10.665] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-a3eced922e577a1cdd65e59a61e0d7c8744a0fc1.sock"}
+[23:42:10.677] Spawned 123834
+[23:42:10.873] > local-server-6> Spawned ssh, pid=123843
+[23:42:10.881] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:42:10.882] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:42:10.884] > local-server-6> ssh child died, shutting down
+[23:42:10.895] Local server exit: 0
+[23:42:10.896] Received install output: local-server-6> Spawned ssh, pid=123843
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-6> ssh child died, shutting down
+
+[23:42:10.897] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:42:10.904] ------
+
+
+
+
+[23:42:20.921] ------
+
+
+
+
+[23:42:20.921] SSH Resolver called for "ssh-remote+hust02", attempt 7, (Reconnection)
+[23:42:20.923] SSH Resolver called for host: hust02
+[23:42:20.923] Setting up SSH remote "hust02"
+[23:42:20.924] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:42:20.927] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:42:20.927] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:42:20.931] Install and start server if needed
+[23:42:20.939] askpass server listening on /tmp/vscode-ssh-askpass-7357c41e18897790fbb8cd75a2dc662b87f6459a.sock
+[23:42:20.939] Spawning local server with {"serverId":7,"ipcHandlePath":"/tmp/vscode-ssh-askpass-7623b4549ba7f4daf7ab4a1a8f413ee5cfa7402f.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","43047","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:42:20.939] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-7357c41e18897790fbb8cd75a2dc662b87f6459a.sock"}
+[23:42:20.953] Spawned 123850
+[23:42:21.122] > local-server-7> Spawned ssh, pid=123858
+[23:42:21.132] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:42:21.135] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:42:21.135] > local-server-7> ssh child died, shutting down
+[23:42:21.142] Local server exit: 0
+[23:42:21.142] Received install output: local-server-7> Spawned ssh, pid=123858
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-7> ssh child died, shutting down
+
+[23:42:21.144] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:42:21.147] ------
+
+
+
+
+[23:42:31.194] ------
+
+
+
+
+[23:42:31.194] SSH Resolver called for "ssh-remote+hust02", attempt 8, (Reconnection)
+[23:42:31.199] SSH Resolver called for host: hust02
+[23:42:31.199] Setting up SSH remote "hust02"
+[23:42:31.201] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:42:31.202] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:42:31.204] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:42:31.212] Install and start server if needed
+[23:42:31.224] askpass server listening on /tmp/vscode-ssh-askpass-ac3c30315efe89c373a4ee6ec3f3b96d897f85c8.sock
+[23:42:31.225] Spawning local server with {"serverId":8,"ipcHandlePath":"/tmp/vscode-ssh-askpass-5f04a4552140aa48f3d0f4777ffc9c8ff17d572b.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","38645","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:42:31.225] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-ac3c30315efe89c373a4ee6ec3f3b96d897f85c8.sock"}
+[23:42:31.236] Spawned 123863
+[23:42:31.435] > local-server-8> Spawned ssh, pid=123871
+[23:42:31.443] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:42:31.445] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:42:31.446] > local-server-8> ssh child died, shutting down
+[23:42:31.456] Local server exit: 0
+[23:42:31.456] Received install output: local-server-8> Spawned ssh, pid=123871
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-8> ssh child died, shutting down
+
+[23:42:31.458] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:42:31.466] ------
+
+
+
+
+[23:42:41.482] ------
+
+
+
+
+[23:42:41.482] SSH Resolver called for "ssh-remote+hust02", attempt 9, (Reconnection)
+[23:42:41.484] SSH Resolver called for host: hust02
+[23:42:41.484] Setting up SSH remote "hust02"
+[23:42:41.486] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:42:41.487] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:42:41.489] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:42:41.493] Install and start server if needed
+[23:42:41.498] askpass server listening on /tmp/vscode-ssh-askpass-46d43fb539c815e46474d6a44265d64a545afec0.sock
+[23:42:41.500] Spawning local server with {"serverId":9,"ipcHandlePath":"/tmp/vscode-ssh-askpass-2a970032c89fbdf18fed469bfa5e2f98a3572e88.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","46269","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:42:41.500] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-46d43fb539c815e46474d6a44265d64a545afec0.sock"}
+[23:42:41.510] Spawned 123885
+[23:42:41.674] > local-server-9> Spawned ssh, pid=123893
+[23:42:41.680] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:42:41.682] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:42:41.682] > local-server-9> ssh child died, shutting down
+[23:42:41.694] Local server exit: 0
+[23:42:41.695] Received install output: local-server-9> Spawned ssh, pid=123893
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-9> ssh child died, shutting down
+
+[23:42:41.697] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:42:41.702] ------
+
+
+
+
+[23:43:11.760] ------
+
+
+
+
+[23:43:11.761] SSH Resolver called for "ssh-remote+hust02", attempt 10, (Reconnection)
+[23:43:11.764] SSH Resolver called for host: hust02
+[23:43:11.764] Setting up SSH remote "hust02"
+[23:43:11.768] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:43:11.770] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:43:11.770] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:43:11.775] Install and start server if needed
+[23:43:11.781] askpass server listening on /tmp/vscode-ssh-askpass-23b409c26f932c9f64aa99f9453d4c6b17f29c6a.sock
+[23:43:11.782] Spawning local server with {"serverId":10,"ipcHandlePath":"/tmp/vscode-ssh-askpass-f844011f3ae024a94dc4d5f0c694f7bb60abe00c.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","44765","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:43:11.782] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-23b409c26f932c9f64aa99f9453d4c6b17f29c6a.sock"}
+[23:43:11.791] Spawned 123908
+[23:43:11.967] > local-server-10> Spawned ssh, pid=123916
+[23:43:11.976] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:43:11.977] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:43:11.978] > local-server-10> ssh child died, shutting down
+[23:43:11.989] Local server exit: 0
+[23:43:11.989] Received install output: local-server-10> Spawned ssh, pid=123916
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-10> ssh child died, shutting down
+
+[23:43:11.991] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:43:11.997] ------
+
+
+
+
+[23:43:42.051] ------
+
+
+
+
+[23:43:42.051] SSH Resolver called for "ssh-remote+hust02", attempt 11, (Reconnection)
+[23:43:42.053] SSH Resolver called for host: hust02
+[23:43:42.053] Setting up SSH remote "hust02"
+[23:43:42.054] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:43:42.055] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:43:42.057] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:43:42.061] Install and start server if needed
+[23:43:42.069] askpass server listening on /tmp/vscode-ssh-askpass-8462a0c9a5f5467d74afbc3b8b78c789ef1f8d58.sock
+[23:43:42.069] Spawning local server with {"serverId":11,"ipcHandlePath":"/tmp/vscode-ssh-askpass-b2b62969fb43832e61eb081a2c22c9d4196800e1.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","43063","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:43:42.069] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-8462a0c9a5f5467d74afbc3b8b78c789ef1f8d58.sock"}
+[23:43:42.080] Spawned 123927
+[23:43:42.277] > local-server-11> Spawned ssh, pid=123935
+[23:43:42.285] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:43:42.289] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:43:42.290] > local-server-11> ssh child died, shutting down
+[23:43:42.296] Local server exit: 0
+[23:43:42.297] Received install output: local-server-11> Spawned ssh, pid=123935
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-11> ssh child died, shutting down
+
+[23:43:42.299] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:43:42.303] ------
+
+
+
+
+[23:44:12.360] ------
+
+
+
+
+[23:44:12.360] SSH Resolver called for "ssh-remote+hust02", attempt 12, (Reconnection)
+[23:44:12.362] SSH Resolver called for host: hust02
+[23:44:12.362] Setting up SSH remote "hust02"
+[23:44:12.363] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:44:12.364] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:44:12.365] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:44:12.370] Install and start server if needed
+[23:44:12.378] askpass server listening on /tmp/vscode-ssh-askpass-bed56f31cd161213cac30e13a28b72e7e25b3f05.sock
+[23:44:12.379] Spawning local server with {"serverId":12,"ipcHandlePath":"/tmp/vscode-ssh-askpass-5d8a1c0671c7a57a195415b0b6bac6aa3119175a.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","45607","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:44:12.379] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-bed56f31cd161213cac30e13a28b72e7e25b3f05.sock"}
+[23:44:12.393] Spawned 123957
+[23:44:12.627] > local-server-12> Spawned ssh, pid=123965
+[23:44:12.637] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:44:12.638] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:44:12.639] > local-server-12> ssh child died, shutting down
+[23:44:12.649] Local server exit: 0
+[23:44:12.650] Received install output: local-server-12> Spawned ssh, pid=123965
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-12> ssh child died, shutting down
+
+[23:44:12.651] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:44:12.657] ------
+
+
+
+
+[23:44:42.714] ------
+
+
+
+
+[23:44:42.714] SSH Resolver called for "ssh-remote+hust02", attempt 13, (Reconnection)
+[23:44:42.717] SSH Resolver called for host: hust02
+[23:44:42.717] Setting up SSH remote "hust02"
+[23:44:42.718] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:44:42.721] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:44:42.721] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:44:42.733] Install and start server if needed
+[23:44:42.742] askpass server listening on /tmp/vscode-ssh-askpass-7c38cb88a64ecc5d87a76e1e169733c7098da593.sock
+[23:44:42.743] Spawning local server with {"serverId":13,"ipcHandlePath":"/tmp/vscode-ssh-askpass-4e1f981eb0d627f5d4eb3ef65be234047dc80ad1.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","36657","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:44:42.745] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-7c38cb88a64ecc5d87a76e1e169733c7098da593.sock"}
+[23:44:42.756] Spawned 124008
+[23:44:42.942] > local-server-13> Spawned ssh, pid=124016
+[23:44:42.949] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:44:42.950] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:44:42.956] > local-server-13> ssh child died, shutting down
+[23:44:42.962] Local server exit: 0
+[23:44:42.963] Received install output: local-server-13> Spawned ssh, pid=124016
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-13> ssh child died, shutting down
+
+[23:44:42.965] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:44:42.970] ------
+
+
+
+
+[23:45:13.024] ------
+
+
+
+
+[23:45:13.024] SSH Resolver called for "ssh-remote+hust02", attempt 14, (Reconnection)
+[23:45:13.027] SSH Resolver called for host: hust02
+[23:45:13.027] Setting up SSH remote "hust02"
+[23:45:13.029] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:45:13.029] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:45:13.030] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:45:13.034] Install and start server if needed
+[23:45:13.041] askpass server listening on /tmp/vscode-ssh-askpass-cbd703347774de5455b887c3754f70d9dbe6e693.sock
+[23:45:13.042] Spawning local server with {"serverId":14,"ipcHandlePath":"/tmp/vscode-ssh-askpass-34ad8d35303f6879fe6d991173a8bf4dc4476eff.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","41691","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:45:13.042] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-cbd703347774de5455b887c3754f70d9dbe6e693.sock"}
+[23:45:13.049] Spawned 124031
+[23:45:13.234] > local-server-14> Spawned ssh, pid=124039
+[23:45:13.243] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:45:13.245] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:45:13.245] > local-server-14> ssh child died, shutting down
+[23:45:13.253] Local server exit: 0
+[23:45:13.254] Received install output: local-server-14> Spawned ssh, pid=124039
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-14> ssh child died, shutting down
+
+[23:45:13.256] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:45:13.263] ------
+
+
+
+
+[23:45:43.324] ------
+
+
+
+
+[23:45:43.325] SSH Resolver called for "ssh-remote+hust02", attempt 15, (Reconnection)
+[23:45:43.333] SSH Resolver called for host: hust02
+[23:45:43.334] Setting up SSH remote "hust02"
+[23:45:43.339] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:45:43.343] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:45:43.345] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:45:43.351] Install and start server if needed
+[23:45:43.363] askpass server listening on /tmp/vscode-ssh-askpass-2cb96e58fca432507f482b4a16204b8d8bab943b.sock
+[23:45:43.364] Spawning local server with {"serverId":15,"ipcHandlePath":"/tmp/vscode-ssh-askpass-24a1ff8079d0830cb122fe8965ba58a10e9177f7.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","40007","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:45:43.364] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-2cb96e58fca432507f482b4a16204b8d8bab943b.sock"}
+[23:45:43.375] Spawned 124106
+[23:45:43.573] > local-server-15> Spawned ssh, pid=124114
+[23:45:43.580] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:45:43.585] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:45:43.586] > local-server-15> ssh child died, shutting down
+[23:45:43.594] Local server exit: 0
+[23:45:43.594] Received install output: local-server-15> Spawned ssh, pid=124114
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-15> ssh child died, shutting down
+
+[23:45:43.596] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:45:43.601] ------
+
+
+
+
+[23:46:13.664] ------
+
+
+
+
+[23:46:13.664] SSH Resolver called for "ssh-remote+hust02", attempt 16, (Reconnection)
+[23:46:13.667] SSH Resolver called for host: hust02
+[23:46:13.667] Setting up SSH remote "hust02"
+[23:46:13.669] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:46:13.671] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:46:13.672] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:46:13.684] Install and start server if needed
+[23:46:13.695] askpass server listening on /tmp/vscode-ssh-askpass-e0a805126b59aa3595b7c0f4012bc2be7ca0c227.sock
+[23:46:13.703] Spawning local server with {"serverId":16,"ipcHandlePath":"/tmp/vscode-ssh-askpass-872f0b26cfd36cd56414bab4811228dcce3efb21.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","45119","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:46:13.703] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-e0a805126b59aa3595b7c0f4012bc2be7ca0c227.sock"}
+[23:46:13.717] Spawned 124125
+[23:46:13.942] > local-server-16> Spawned ssh, pid=124137
+[23:46:13.950] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:46:13.951] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:46:13.952] > local-server-16> ssh child died, shutting down
+[23:46:13.962] Local server exit: 0
+[23:46:13.963] Received install output: local-server-16> Spawned ssh, pid=124137
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-16> ssh child died, shutting down
+
+[23:46:13.966] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:46:13.971] ------
+
+
+
+
+[23:46:44.021] ------
+
+
+
+
+[23:46:44.022] SSH Resolver called for "ssh-remote+hust02", attempt 17, (Reconnection)
+[23:46:44.024] SSH Resolver called for host: hust02
+[23:46:44.024] Setting up SSH remote "hust02"
+[23:46:44.027] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:46:44.028] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:46:44.029] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:46:44.036] Install and start server if needed
+[23:46:44.045] askpass server listening on /tmp/vscode-ssh-askpass-c1af4dd2f831cccd0f9927645b5845021a80c643.sock
+[23:46:44.045] Spawning local server with {"serverId":17,"ipcHandlePath":"/tmp/vscode-ssh-askpass-debd6f04896fa9afe16ccfbf71dee52b529048a2.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","36027","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:46:44.046] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-c1af4dd2f831cccd0f9927645b5845021a80c643.sock"}
+[23:46:44.055] Spawned 124192
+[23:46:44.253] > local-server-17> Spawned ssh, pid=124200
+[23:46:44.266] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:46:44.272] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:46:44.273] > local-server-17> ssh child died, shutting down
+[23:46:44.280] Local server exit: 0
+[23:46:44.281] Received install output: local-server-17> Spawned ssh, pid=124200
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-17> ssh child died, shutting down
+
+[23:46:44.283] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:46:44.295] ------
+
+
+
+
+[23:47:14.360] ------
+
+
+
+
+[23:47:14.360] SSH Resolver called for "ssh-remote+hust02", attempt 18, (Reconnection)
+[23:47:14.363] SSH Resolver called for host: hust02
+[23:47:14.364] Setting up SSH remote "hust02"
+[23:47:14.367] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:47:14.370] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:47:14.372] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:47:14.382] Install and start server if needed
+[23:47:14.391] askpass server listening on /tmp/vscode-ssh-askpass-71404e05e272c0c8c99e8b6c60ffab8296b59311.sock
+[23:47:14.391] Spawning local server with {"serverId":18,"ipcHandlePath":"/tmp/vscode-ssh-askpass-70185b9d8f628bc6f0da7253a57633b15aaf587c.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","39541","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:47:14.392] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-71404e05e272c0c8c99e8b6c60ffab8296b59311.sock"}
+[23:47:14.402] Spawned 124235
+[23:47:14.587] > local-server-18> Spawned ssh, pid=124243
+[23:47:14.594] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:47:14.595] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:47:14.596] > local-server-18> ssh child died, shutting down
+[23:47:14.607] Local server exit: 0
+[23:47:14.607] Received install output: local-server-18> Spawned ssh, pid=124243
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-18> ssh child died, shutting down
+
+[23:47:14.610] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:47:14.616] ------
+
+
+
+
+[23:47:44.678] ------
+
+
+
+
+[23:47:44.679] SSH Resolver called for "ssh-remote+hust02", attempt 19, (Reconnection)
+[23:47:44.681] SSH Resolver called for host: hust02
+[23:47:44.681] Setting up SSH remote "hust02"
+[23:47:44.685] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[23:47:44.686] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[23:47:44.687] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[23:47:44.693] Install and start server if needed
+[23:47:44.707] askpass server listening on /tmp/vscode-ssh-askpass-4cae16ad778c24c7c5a70a875ddd83d8622a700a.sock
+[23:47:44.707] Spawning local server with {"serverId":19,"ipcHandlePath":"/tmp/vscode-ssh-askpass-0850ebb40f67a9507b5df79f7e0ec6ec58fc5b76.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","35099","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[23:47:44.707] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-4cae16ad778c24c7c5a70a875ddd83d8622a700a.sock"}
+[23:47:44.715] Spawned 124306
+[23:47:44.939] > local-server-19> Spawned ssh, pid=124314
+[23:47:44.945] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[23:47:44.948] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[23:47:44.949] > local-server-19> ssh child died, shutting down
+[23:47:44.959] Local server exit: 0
+[23:47:44.960] Received install output: local-server-19> Spawned ssh, pid=124314
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-19> ssh child died, shutting down
+
+[23:47:44.962] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[23:47:44.965] ------
+
+
+
+
+[10:47:30.562] ------
+
+
+
+
+[10:47:30.563] SSH Resolver called for "ssh-remote+hust02", attempt 20, (Reconnection)
+[10:47:30.573] SSH Resolver called for host: hust02
+[10:47:30.573] Setting up SSH remote "hust02"
+[10:47:30.583] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[10:47:30.588] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:47:30.590] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[10:47:30.617] Install and start server if needed
+[10:47:30.629] askpass server listening on /tmp/vscode-ssh-askpass-ad1c35b433ed29f681e0e59113602d24198b8890.sock
+[10:47:30.629] Spawning local server with {"serverId":20,"ipcHandlePath":"/tmp/vscode-ssh-askpass-c75e818cf52d3c703e8a83bf43dc0386b6a28343.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","38849","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[10:47:30.630] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-ad1c35b433ed29f681e0e59113602d24198b8890.sock"}
+[10:47:30.663] Spawned 124478
+[10:47:31.084] > local-server-20> Spawned ssh, pid=124486
+[10:47:31.097] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[10:47:31.103] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[10:47:31.107] > local-server-20> ssh child died, shutting down
+[10:47:31.120] Local server exit: 0
+[10:47:31.121] Received install output: local-server-20> Spawned ssh, pid=124486
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-20> ssh child died, shutting down
+
+[10:47:31.127] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[10:47:31.136] ------
+
+
+
+
+[10:48:01.212] ------
+
+
+
+
+[10:48:01.213] SSH Resolver called for "ssh-remote+hust02", attempt 21, (Reconnection)
+[10:48:01.215] SSH Resolver called for host: hust02
+[10:48:01.215] Setting up SSH remote "hust02"
+[10:48:01.221] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[10:48:01.222] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:48:01.225] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[10:48:01.237] Install and start server if needed
+[10:48:01.253] askpass server listening on /tmp/vscode-ssh-askpass-47ea591996b2353b82079756e275a327cdd10936.sock
+[10:48:01.255] Spawning local server with {"serverId":21,"ipcHandlePath":"/tmp/vscode-ssh-askpass-6d930f653286d045bd3a8e3704f02d7bf4df3e29.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","45389","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[10:48:01.255] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-47ea591996b2353b82079756e275a327cdd10936.sock"}
+[10:48:01.263] Spawned 124547
+[10:48:01.551] > local-server-21> Spawned ssh, pid=124556
+[10:48:01.574] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[10:48:01.581] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[10:48:01.582] > local-server-21> ssh child died, shutting down
+[10:48:01.592] Local server exit: 0
+[10:48:01.593] Received install output: local-server-21> Spawned ssh, pid=124556
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-21> ssh child died, shutting down
+
+[10:48:01.604] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[10:48:01.629] ------
+
+
+
+
+[10:48:31.701] ------
+
+
+
+
+[10:48:31.701] SSH Resolver called for "ssh-remote+hust02", attempt 22, (Reconnection)
+[10:48:31.703] SSH Resolver called for host: hust02
+[10:48:31.703] Setting up SSH remote "hust02"
+[10:48:31.704] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[10:48:31.705] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:48:31.706] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[10:48:31.715] Install and start server if needed
+[10:48:31.722] askpass server listening on /tmp/vscode-ssh-askpass-59a13d06747348a96f0de63bdca0b3a562ad7aaf.sock
+[10:48:31.723] Spawning local server with {"serverId":22,"ipcHandlePath":"/tmp/vscode-ssh-askpass-a59b6113c891a6917dc9c9f9be30eaee26cba135.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","41951","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[10:48:31.724] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-59a13d06747348a96f0de63bdca0b3a562ad7aaf.sock"}
+[10:48:31.738] Spawned 124607
+[10:48:31.938] > local-server-22> Spawned ssh, pid=124615
+[10:48:31.946] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[10:48:31.948] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[10:48:31.949] > local-server-22> ssh child died, shutting down
+[10:48:31.959] Local server exit: 0
+[10:48:31.959] Received install output: local-server-22> Spawned ssh, pid=124615
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-22> ssh child died, shutting down
+
+[10:48:31.963] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[10:48:31.968] ------
+
+
+
+
+[10:49:02.033] ------
+
+
+
+
+[10:49:02.034] SSH Resolver called for "ssh-remote+hust02", attempt 23, (Reconnection)
+[10:49:02.036] SSH Resolver called for host: hust02
+[10:49:02.036] Setting up SSH remote "hust02"
+[10:49:02.037] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[10:49:02.039] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:49:02.039] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[10:49:02.047] Install and start server if needed
+[10:49:02.056] askpass server listening on /tmp/vscode-ssh-askpass-7913ebd13dd71caee35b73cba76bd2284fb62f19.sock
+[10:49:02.057] Spawning local server with {"serverId":23,"ipcHandlePath":"/tmp/vscode-ssh-askpass-bea5e71c208a6318f433facaae7ad880558784a7.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","38801","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[10:49:02.057] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-7913ebd13dd71caee35b73cba76bd2284fb62f19.sock"}
+[10:49:02.066] Spawned 124715
+[10:49:02.270] > local-server-23> Spawned ssh, pid=124725
+[10:49:02.281] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[10:49:02.282] stderr> ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+[10:49:02.282] > local-server-23> ssh child died, shutting down
+[10:49:02.292] Local server exit: 0
+[10:49:02.292] Received install output: local-server-23> Spawned ssh, pid=124725
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+ssh: Could not resolve hostname xz-ct1.cloudiplc.com: Temporary failure in name resolution
+local-server-23> ssh child died, shutting down
+
+[10:49:02.298] Resolver error: Error: Could not resolve hostname
+	at g.Offline (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:585273)
+	at /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:582694
+	at t.handleInstallOutput (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:583062)
+	at Object.e [as tryInstallWithLocalServer] (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:624373)
+	at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:643506
+	at async t.withShowDetailsEvent (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:647224)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622845
+	at async T (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:619351)
+	at async t.resolveWithLocalServer (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:622460)
+	at async t.resolve (/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:644834)
+	at async /root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/extension.js:1:726917
+[10:49:02.303] ------
+
+
+
+
+[10:49:32.369] ------
+
+
+
+
+[10:49:32.369] SSH Resolver called for "ssh-remote+hust02", attempt 24, (Reconnection)
+[10:49:32.372] SSH Resolver called for host: hust02
+[10:49:32.372] Setting up SSH remote "hust02"
+[10:49:32.378] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[10:49:32.379] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:49:32.380] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[10:49:32.389] Install and start server if needed
+[10:49:32.400] askpass server listening on /tmp/vscode-ssh-askpass-f8f5e3926ecfc1b3b03cbfc63e9db721dfb63e79.sock
+[10:49:32.401] Spawning local server with {"serverId":24,"ipcHandlePath":"/tmp/vscode-ssh-askpass-146a6bd9e596bab51e5b04591e4d9b90dae79988.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","46865","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[10:49:32.401] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-f8f5e3926ecfc1b3b03cbfc63e9db721dfb63e79.sock"}
+[10:49:32.411] Spawned 124859
+[10:49:32.620] > local-server-24> Spawned ssh, pid=124868
+[10:49:32.627] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[10:49:33.169] stderr> debug1: Server host key: ecdsa-sha2-nistp256 SHA256:RTYGHnJ48YY8z0RysizPpTP0ShpOGWw9u4R5abt086k
+[10:49:33.492] stderr> Authenticated to xz-ct1.cloudiplc.com ([221.229.197.235]:39234).
+[10:49:34.518] > Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-136-generic x86_64)
+> 
+>  * Documentation:  https://help.ubuntu.com
+>  * Management:     https://landscape.canonical.com
+>  * Support:        https://ubuntu.com/advantage
+> 
+>   System information as of Thu 06 Apr 2023 10:49:33 AM CST
+> 
+>   System load:  0.01                Processes:                   1495
+>   Usage of /:   47.3% of 889.17GB   Users logged in:             2
+>   Memory usage: 4%                  IPv4 address for ens25f0:    172.16.9.234
+>   Swap usage:   0%                  IPv4 address for ztc25kybwp: 10.144.184.215
+>   Temperature:  43.0 C              IPv4 address for ztc25kybwp: 10.144.39.234
+> 
+>  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+>    just raised the bar for easy, resilient and secure K8s cluster deployment.
+> 
+>    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+> 
+> 168 updates can be applied immediately.
+> To see these additional updates run: apt list --upgradable
+> 
+> New release '22.04.2 LTS' available.
+> Run 'do-release-upgrade' to upgrade to it.
+> 
+> 
+> 1 updates could not be installed automatically. For more details,
+> see /var/log/unattended-upgrades/unattended-upgrades.log
+> Your Hardware Enablement Stack (HWE) is supported until April 2025.
+> 
+> *** System restart required ***
+[10:49:34.598] > ready: 82fd9983bfa0
+[10:49:34.658] > Linux 5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+[10:49:34.660] Platform: linux
+[10:49:34.724] > /bin/bash
+[10:49:34.724] Shell: bash
+[10:49:34.724] Creating bash subshell inside "bash"
+[10:49:34.864] > bash version:  5.0.17(1)-release
+[10:49:34.902] > bash version:  5.0.17(1)-release
+[10:49:34.936] > bash version:  5.0.17(1)-release
+[10:49:35.013] > 82fd9983bfa0: running
+[10:49:35.092] > Acquiring lock on /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/vscode-remote-lock.xyw.784b0177c56c607789f9638da7b6bf3230d47a8c
+> Found existing installation at /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c...
+> Checking /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log and /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.pid for a running server
+> Looking for server with pid: 2439628
+> Starting server with command... /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all   &> "/home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log" < /dev/null
+> printenv:
+[10:49:35.170] >     SHELL=/bin/bash
+>     LC_ADDRESS=C.UTF-8
+>     LC_NAME=C.UTF-8
+>     LC_MONETARY=C.UTF-8
+>     PWD=/home/xyw
+>     NIX_PROFILES=/nix/var/nix/profiles/default /home/xyw/.nix-profile
+>     LOGNAME=xyw
+>     XDG_SESSION_TYPE=tty
+>     MOTD_SHOWN=pam
+>     HOME=/home/xyw
+>     LC_PAPER=C.UTF-8
+>     LANG=C.UTF-8
+>     NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+>     VSCODE_AGENT_FOLDER=/home/xyw/.vscode-server
+>     SSH_CONNECTION=127.0.0.1 40684 127.0.0.1 22
+>     XDG_SESSION_CLASS=user
+>     LC_IDENTIFICATION=C.UTF-8
+>     USER=xyw
+>     SHLVL=1
+>     LC_TELEPHONE=C.UTF-8
+>     LC_MEASUREMENT=C.UTF-8
+>     XDG_SESSION_ID=17059
+>     XDG_RUNTIME_DIR=/run/user/1001
+>     SSH_CLIENT=127.0.0.1 40684 22
+>     LC_TIME=C.UTF-8
+>     XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+>     PATH=/home/xyw/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>     DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+>     LC_NUMERIC=C.UTF-8
+>     _=/usr/bin/printenv
+> Removing old logfile at /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log
+> Spawned remote server: 2446086
+> Waiting for server log...
+> Waiting for server log...
+[10:49:35.248] >  
+> *
+> * Reminder: You may only use this software with Visual Studio family products,
+> * as described in the license (https://go.microsoft.com/fwlink/?linkid=2077057)
+> *
+>  
+> 82fd9983bfa0: start
+> SSH_AUTH_SOCK====
+> DISPLAY====
+> webUiAccessToken====
+> listeningOn==42867==
+> osReleaseId==ubuntu==
+> arch==x86_64==
+> tmpDir==/run/user/1001==
+> platform==linux==
+> unpackResult====
+> didLocalDownload==0==
+> downloadTime====
+> installTime====
+> extInstallTime====
+> serverStartTime==88==
+> connectionToken==1aa11aa1-a11a-1a1a-1aaa-aa1a11111aa1==
+> 82fd9983bfa0: end
+[10:49:35.249] Received install output: 
+SSH_AUTH_SOCK====
+DISPLAY====
+webUiAccessToken====
+listeningOn==42867==
+osReleaseId==ubuntu==
+arch==x86_64==
+tmpDir==/run/user/1001==
+platform==linux==
+unpackResult====
+didLocalDownload==0==
+downloadTime====
+installTime====
+extInstallTime====
+serverStartTime==88==
+connectionToken==1aa11aa1-a11a-1a1a-1aaa-aa1a11111aa1==
+
+[10:49:35.249] Remote server is listening on 42867
+[10:49:35.250] Parsed server configuration: {"serverConfiguration":{"remoteListeningOn":{"port":42867},"osReleaseId":"ubuntu","arch":"x86_64","webUiAccessToken":"","sshAuthSock":"","display":"","tmpDir":"/run/user/1001","platform":"linux","connectionToken":"1aa11aa1-a11a-1a1a-1aaa-aa1a11111aa1"},"serverStartTime":88,"installUnpackCode":""}
+[10:49:35.260] Persisting server connection details to /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[10:49:35.269] Starting forwarding server. localPort 34691 -> socksPort 46865 -> remotePort 42867
+[10:49:35.270] Forwarding server listening on 34691
+[10:49:35.270] Waiting for ssh tunnel to be ready
+[10:49:35.272] [Forwarding server 34691] Got connection 0
+[10:49:35.281] Tunneled 42867 to local port 34691
+[10:49:35.282] Resolved "ssh-remote+hust02" to "127.0.0.1:34691"
+[10:49:35.311] ------
+
+
+
+
+[10:49:35.409] [Forwarding server 34691] Got connection 1
+[10:49:35.681] [Forwarding server 34691] Got connection 2

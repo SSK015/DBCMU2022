@@ -1,0 +1,47 @@
+[2023-04-05 21:32:19.023] [main] [error] [uncaught exception in main]: Error: Unable to retrieve mac address (unexpected format)
+[2023-04-05 21:32:19.023] [main] [error] Error: Unable to retrieve mac address (unexpected format)
+    at R (/usr/share/code/resources/app/out/vs/code/electron-main/main.js:16:47813)
+    at m (/usr/share/code/resources/app/out/vs/code/electron-main/main.js:21:38958)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async /usr/share/code/resources/app/out/vs/code/electron-main/main.js:21:38816
+[2023-04-05 21:32:20.217] [main] [info] update#setState idle
+[2023-04-05 21:32:23.248] [main] [info] Starting extension host with pid 120122 (fork() took 22 ms).
+[2023-04-05 21:32:50.221] [main] [info] update#setState checking for updates
+[2023-04-05 21:32:50.238] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:105:7047)
+    at SimpleURLLoaderWrapper.emit (node:events:526:28)
+[2023-04-05 21:32:50.240] [main] [info] update#setState idle
+[2023-04-05 21:32:59.522] [main] [info] Starting extension host with pid 120210 (fork() took 19 ms).
+[2023-04-05 21:33:05.350] [main] [info] Extension host with pid 120210 exited with code: 0, signal: null.
+[2023-04-05 21:33:06.890] [main] [info] Starting extension host with pid 120287 (fork() took 20 ms).
+[2023-04-05 21:34:36.867] [main] [info] Extension host with pid 120287 exited with code: 0, signal: null.
+[2023-04-05 21:34:38.640] [main] [info] Starting extension host with pid 120511 (fork() took 17 ms).
+[2023-04-05 21:35:01.481] [main] [info] Extension host with pid 120511 exited with code: 0, signal: null.
+[2023-04-05 21:35:03.403] [main] [info] Starting extension host with pid 120575 (fork() took 18 ms).
+[2023-04-05 21:35:22.273] [main] [info] Extension host with pid 120575 exited with code: 0, signal: null.
+[2023-04-05 21:35:24.339] [main] [info] Starting extension host with pid 120624 (fork() took 14 ms).
+[2023-04-05 21:35:51.626] [main] [info] Starting extension host with pid 120688 (fork() took 17 ms).
+[2023-04-05 21:36:07.331] [main] [info] Extension host with pid 120688 exited with code: 0, signal: null.
+[2023-04-05 21:36:08.653] [main] [info] Starting extension host with pid 120725 (fork() took 17 ms).
+[2023-04-05 21:48:09.176] [main] [info] Extension host with pid 120122 exited with code: 0, signal: null.
+[2023-04-05 21:48:18.418] [main] [info] Extension host with pid 120624 exited with code: 0, signal: null.
+[2023-04-05 22:32:50.269] [main] [info] update#setState checking for updates
+[2023-04-05 22:32:51.304] [main] [info] update#setState available for download
+[2023-04-06 10:50:21.579] [main] [info] Extension host with pid 120725 exited with code: 0, signal: null.
+[2023-04-06 10:50:23.559] [main] [info] Starting extension host with pid 124886 (fork() took 17 ms).
+[2023-04-06 10:50:45.201] [main] [info] Extension host with pid 124886 exited with code: 0, signal: null.
+[2023-04-06 10:50:47.037] [main] [info] Starting extension host with pid 124936 (fork() took 15 ms).
+[2023-04-06 12:59:23.255] [main] [info] Extension host with pid 124936 exited with code: 0, signal: null.
+[2023-04-06 12:59:25.763] [main] [info] Starting extension host with pid 126448 (fork() took 18 ms).
+[2023-04-06 12:59:37.307] [main] [info] Extension host with pid 126448 exited with code: 0, signal: null.
+[2023-04-06 12:59:38.837] [main] [info] Starting extension host with pid 126632 (fork() took 22 ms).
+[2023-04-06 22:42:13.527] [main] [info] Extension host with pid 126632 exited with code: 0, signal: null.
+[2023-04-06 22:42:15.369] [main] [info] Starting extension host with pid 128909 (fork() took 18 ms).
+[2023-04-06 22:42:34.782] [main] [info] Extension host with pid 128909 exited with code: 0, signal: null.
+[2023-04-06 22:42:36.182] [main] [info] Starting extension host with pid 129089 (fork() took 19 ms).
+[2023-04-06 22:42:56.544] [main] [info] Starting extension host with pid 129146 (fork() took 17 ms).
+[2023-04-06 22:43:55.531] [main] [info] Starting extension host with pid 129224 (fork() took 14 ms).
+[2023-04-07 11:45:10.286] [main] [info] Extension host with pid 129089 exited with code: 0, signal: null.
+[2023-04-07 11:45:10.287] [main] [info] Extension host with pid 129224 exited with code: 0, signal: null.
+[2023-04-07 11:45:10.369] [main] [info] Extension host with pid 129146 exited with code: 0, signal: null.
+[2023-04-07 11:45:10.385] [main] [info] Waiting for extension host with pid 129146 to exit.

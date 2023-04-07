@@ -1,0 +1,218 @@
+[2023-04-05 21:32:59.337] [renderer3] [info] [attempt 1] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:00.959] [renderer3] [error] [attempt 1] resolveAuthority(ssh-remote) returned an error after 1621 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:00.962] [renderer3] [info] [attempt 2] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:01.319] [renderer3] [error] [attempt 2] resolveAuthority(ssh-remote) returned an error after 359 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:01.320] [renderer3] [info] [attempt 3] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:01.541] [renderer3] [error] RequestService#request (browser) - error https://vscodeexperiments.azureedge.net/experiments/vscode-experiments.json {"name":"Offline"}
+[2023-04-05 21:33:01.615] [renderer3] [error] [attempt 3] resolveAuthority(ssh-remote) returned an error after 295 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:01.615] [renderer3] [info] [attempt 4] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:01.909] [renderer3] [error] [attempt 4] resolveAuthority(ssh-remote) returned an error after 292 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:01.911] [renderer3] [info] [attempt 5] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:02.128] [renderer3] [error] [attempt 5] resolveAuthority(ssh-remote) returned an error after 221 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:02.129] [renderer3] [error] Error received from starting extension host (kind: Remote)
+[2023-04-05 21:33:02.130] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.130] [renderer3] [error] [remote-connection][attempt 1] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:02.130] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.134] [renderer3] [error] [remote-connection][attempt 2] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:02.134] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.235] [renderer3] [error] [remote-connection][attempt 3] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:02.236] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.331] [renderer3] [error] [remote-connection][attempt 4] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:02.331] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.347] [renderer3] [error] [remote-connection][attempt 5]  An error occurred in initial connection! It will be treated as a permanent error. Error:
+[2023-04-05 21:33:02.348] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.349] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.349] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.350] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.351] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.352] [renderer3] [error] Cannot register remote filesystem provider. Error while fetching remote environment. Network is unreachable
+[2023-04-05 21:33:02.490] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.569] [renderer3] [error] Network is unreachable: CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:02.776] [renderer3] [error] net::ERR_INTERNET_DISCONNECTED: Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:105:7047)
+    at SimpleURLLoaderWrapper.emit (node:events:526:28)
+[2023-04-05 21:33:02.879] [renderer3] [error] RequestService#request (browser) - error https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery {"name":"Offline"}
+[2023-04-05 21:33:03.000] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:06.746] [renderer3] [info] [attempt 1] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:07.996] [renderer3] [error] [attempt 1] resolveAuthority(ssh-remote) returned an error after 1223 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:08.002] [renderer3] [info] [attempt 2] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:08.267] [renderer3] [error] [attempt 2] resolveAuthority(ssh-remote) returned an error after 298 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:08.268] [renderer3] [info] [attempt 3] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:08.536] [renderer3] [error] [attempt 3] resolveAuthority(ssh-remote) returned an error after 269 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:08.537] [renderer3] [info] [attempt 4] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:08.820] [renderer3] [error] [attempt 4] resolveAuthority(ssh-remote) returned an error after 284 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:08.821] [renderer3] [info] [attempt 5] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:33:08.917] [renderer3] [error] RequestService#request (browser) - error https://vscodeexperiments.azureedge.net/experiments/vscode-experiments.json {"name":"Offline"}
+[2023-04-05 21:33:09.115] [renderer3] [error] [attempt 5] resolveAuthority(ssh-remote) returned an error after 294 ms {"name":"CodeExpectedError","_message":"Network is unreachable","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:33:09.116] [renderer3] [error] Error received from starting extension host (kind: Remote)
+[2023-04-05 21:33:09.116] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.117] [renderer3] [error] [remote-connection][attempt 1] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:09.117] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.118] [renderer3] [error] [remote-connection][attempt 2] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:09.118] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.354] [renderer3] [error] [remote-connection][attempt 3] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:09.355] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.459] [renderer3] [error] [remote-connection][attempt 4] An error occurred in initial connection! Will retry... Error:
+[2023-04-05 21:33:09.461] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.474] [renderer3] [error] [remote-connection][attempt 5]  An error occurred in initial connection! It will be treated as a permanent error. Error:
+[2023-04-05 21:33:09.475] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.476] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.484] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.484] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.485] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.485] [renderer3] [error] Cannot register remote filesystem provider. Error while fetching remote environment. Network is unreachable
+[2023-04-05 21:33:09.583] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.635] [renderer3] [error] Network is unreachable: CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:09.751] [renderer3] [error] net::ERR_INTERNET_DISCONNECTED: Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:105:7047)
+    at SimpleURLLoaderWrapper.emit (node:events:526:28)
+[2023-04-05 21:33:09.785] [renderer3] [error] RequestService#request (browser) - error https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery {"name":"Offline"}
+[2023-04-05 21:33:09.953] [renderer3] [error] CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:26.729] [renderer3] [error] Network is unreachable: CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:33:28.729] [renderer3] [error] Network is unreachable: CodeExpectedError: Network is unreachable
+    at y._resolveAuthority (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7184)
+    at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async y._resolveAuthorityInitial (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:7798)
+    at async y._scanAndHandleExtensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3191:9633)
+    at async y._initialize (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:3189:23560)
+[2023-04-05 21:34:38.486] [renderer3] [info] [attempt 1] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:34:54.843] [renderer3] [error] [attempt 1] resolveAuthority(ssh-remote) returned an error after 16357 ms {"name":"CodeExpectedError","_message":"The connection timed out","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:34:54.844] [renderer3] [info] [attempt 2] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:35:03.271] [renderer3] [info] [attempt 1] Invoking resolveAuthority(ssh-remote)
+[2023-04-05 21:35:19.543] [renderer3] [error] [attempt 1] resolveAuthority(ssh-remote) returned an error after 16272 ms {"name":"CodeExpectedError","_message":"The connection timed out","_code":"TemporarilyNotAvailable","isHandled":false}
+[2023-04-05 21:35:19.544] [renderer3] [info] [attempt 2] Invoking resolveAuthority(ssh-remote)

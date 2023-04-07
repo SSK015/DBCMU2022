@@ -1,0 +1,327 @@
+[22:42:36.651] Log Level: 2
+[22:42:36.653] remote-ssh@0.90.1
+[22:42:36.653] linux x64
+[22:42:36.668] SSH Resolver called for "ssh-remote+hust02", attempt 1
+[22:42:36.668] "remote.SSH.useLocalServer": true
+[22:42:36.668] "remote.SSH.path": undefined
+[22:42:36.669] "remote.SSH.configFile": undefined
+[22:42:36.669] "remote.SSH.useFlock": true
+[22:42:36.669] "remote.SSH.lockfilesInTmp": false
+[22:42:36.669] "remote.SSH.localServerDownload": auto
+[22:42:36.669] "remote.SSH.remoteServerListenOnSocket": false
+[22:42:36.669] "remote.SSH.showLoginTerminal": false
+[22:42:36.669] "remote.SSH.defaultExtensions": []
+[22:42:36.670] "remote.SSH.loglevel": 2
+[22:42:36.670] "remote.SSH.enableDynamicForwarding": true
+[22:42:36.670] "remote.SSH.enableRemoteCommand": false
+[22:42:36.670] "remote.SSH.serverPickPortsFromRange": {}
+[22:42:36.670] "remote.SSH.serverInstallPath": {}
+[22:42:36.678] SSH Resolver called for host: hust02
+[22:42:36.678] Setting up SSH remote "hust02"
+[22:42:36.684] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[22:42:36.689] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[22:42:36.689] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[22:42:36.697] Install and start server if needed
+[22:42:36.719] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[22:42:36.720] Checking ssh with "ssh -V"
+[22:42:36.741] > OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+
+[22:42:36.750] askpass server listening on /tmp/vscode-ssh-askpass-195e708ff7d9deda45b99fb7af632cb65b19ce5b.sock
+[22:42:36.751] Spawning local server with {"serverId":1,"ipcHandlePath":"/tmp/vscode-ssh-askpass-3bc8400c0e6f407b881ad5337b8f1659a09f95b8.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","42941","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[22:42:36.751] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-195e708ff7d9deda45b99fb7af632cb65b19ce5b.sock"}
+[22:42:36.763] Spawned 129106
+[22:42:36.940] > local-server-1> Spawned ssh, pid=129114
+[22:42:36.946] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[22:42:37.233] stderr> debug1: Server host key: ecdsa-sha2-nistp256 SHA256:RTYGHnJ48YY8z0RysizPpTP0ShpOGWw9u4R5abt086k
+[22:42:37.521] stderr> Authenticated to xz-ct1.cloudiplc.com ([221.229.197.235]:39234).
+[22:42:38.388] > Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-136-generic x86_64)
+> 
+>  * Documentation:  https://help.ubuntu.com
+>  * Management:     https://landscape.canonical.com
+>  * Support:        https://ubuntu.com/advantage
+> 
+>   System information as of Thu 06 Apr 2023 10:42:36 PM CST
+> 
+>   System load:  0.09                Processes:                   1496
+>   Usage of /:   47.5% of 889.17GB   Users logged in:             2
+>   Memory usage: 4%                  IPv4 address for ens25f0:    172.16.9.234
+>   Swap usage:   0%                  IPv4 address for ztc25kybwp: 10.144.184.215
+>   Temperature:  50.0 C              IPv4 address for ztc25kybwp: 10.144.39.234
+> 
+>  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+>    just raised the bar for easy, resilient and secure K8s cluster deployment.
+> 
+>    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+> 
+> 168 updates can be applied immediately.
+> To see these additional updates run: apt list --upgradable
+> 
+> 
+> 1 updates could not be installed automatically. For more details,
+> see /var/log/unattended-upgrades/unattended-upgrades.log
+> Your Hardware Enablement Stack (HWE) is supported until April 2025.
+> 
+> *** System restart required ***
+[22:42:38.458] > ready: e94bcfed9c21
+[22:42:38.514] > Linux 5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+[22:42:38.516] Platform: linux
+[22:42:38.567] > /bin/bash
+[22:42:38.568] Shell: bash
+[22:42:38.568] Creating bash subshell inside "bash"
+[22:42:38.623] > bash version:  5.0.17(1)-release
+[22:42:38.669] > bash version:  5.0.17(1)-release
+[22:42:38.734] > e94bcfed9c21: running
+[22:42:38.813] > Acquiring lock on /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/vscode-remote-lock.xyw.784b0177c56c607789f9638da7b6bf3230d47a8c
+> Found existing installation at /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c...
+> Checking /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log and /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.pid for a running server
+> Looking for server with pid: 2446086
+[22:42:38.867] > Starting server with command... /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all   &> "/home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log" < /dev/null
+> printenv:
+>     SHELL=/bin/bash
+>     LC_ADDRESS=C.UTF-8
+>     LC_NAME=C.UTF-8
+>     LC_MONETARY=C.UTF-8
+>     PWD=/home/xyw
+>     NIX_PROFILES=/nix/var/nix/profiles/default /home/xyw/.nix-profile
+>     LOGNAME=xyw
+>     XDG_SESSION_TYPE=tty
+>     MOTD_SHOWN=pam
+>     HOME=/home/xyw
+>     LC_PAPER=C.UTF-8
+>     LANG=C.UTF-8
+>     NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+>     VSCODE_AGENT_FOLDER=/home/xyw/.vscode-server
+>     SSH_CONNECTION=127.0.0.1 41472 127.0.0.1 22
+>     XDG_SESSION_CLASS=user
+>     LC_IDENTIFICATION=C.UTF-8
+>     USER=xyw
+>     SHLVL=1
+>     LC_TELEPHONE=C.UTF-8
+>     LC_MEASUREMENT=C.UTF-8
+>     XDG_SESSION_ID=17164
+>     XDG_RUNTIME_DIR=/run/user/1001
+>     SSH_CLIENT=127.0.0.1 41472 22
+>     LC_TIME=C.UTF-8
+>     XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+>     PATH=/home/xyw/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>     DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+>     LC_NUMERIC=C.UTF-8
+>     _=/usr/bin/printenv
+> Removing old logfile at /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log
+> Spawned remote server: 2452104
+> Waiting for server log...
+[22:42:38.935] > Waiting for server log...
+>  
+[22:42:39.013] > *
+> * Reminder: You may only use this software with Visual Studio family products,
+> * as described in the license (https://go.microsoft.com/fwlink/?linkid=2077057)
+> *
+>  
+> e94bcfed9c21: start
+> SSH_AUTH_SOCK====
+> DISPLAY====
+> webUiAccessToken====
+> listeningOn==35527==
+> osReleaseId==ubuntu==
+> arch==x86_64==
+> tmpDir==/run/user/1001==
+> platform==linux==
+> unpackResult====
+> didLocalDownload==0==
+> downloadTime====
+> installTime====
+> extInstallTime====
+> serverStartTime==90==
+> connectionToken==1aa11aa1-1111-1111-a111-a1a1aaa11111==
+> e94bcfed9c21: end
+[22:42:39.014] Received install output: 
+SSH_AUTH_SOCK====
+DISPLAY====
+webUiAccessToken====
+listeningOn==35527==
+osReleaseId==ubuntu==
+arch==x86_64==
+tmpDir==/run/user/1001==
+platform==linux==
+unpackResult====
+didLocalDownload==0==
+downloadTime====
+installTime====
+extInstallTime====
+serverStartTime==90==
+connectionToken==1aa11aa1-1111-1111-a111-a1a1aaa11111==
+
+[22:42:39.016] Remote server is listening on 35527
+[22:42:39.016] Parsed server configuration: {"serverConfiguration":{"remoteListeningOn":{"port":35527},"osReleaseId":"ubuntu","arch":"x86_64","webUiAccessToken":"","sshAuthSock":"","display":"","tmpDir":"/run/user/1001","platform":"linux","connectionToken":"1aa11aa1-1111-1111-a111-a1a1aaa11111"},"serverStartTime":90,"installUnpackCode":""}
+[22:42:39.019] Persisting server connection details to /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[22:42:39.027] Starting forwarding server. localPort 42627 -> socksPort 42941 -> remotePort 35527
+[22:42:39.028] Forwarding server listening on 42627
+[22:42:39.028] Waiting for ssh tunnel to be ready
+[22:42:39.031] [Forwarding server 42627] Got connection 0
+[22:42:39.033] Tunneled 35527 to local port 42627
+[22:42:39.034] Resolved "ssh-remote+hust02" to "127.0.0.1:42627"
+[22:42:39.068] ------
+
+
+
+
+[22:42:39.154] [Forwarding server 42627] Got connection 1
+[22:42:39.396] [Forwarding server 42627] Got connection 2
+[11:42:20.682] > local-server-1> ssh child died, shutting down
+[11:42:20.849] Local server exit: 0
+[11:42:20.920] ------
+
+
+
+
+[11:42:20.920] SSH Resolver called for "ssh-remote+hust02", attempt 2, (Reconnection)
+[11:42:20.929] SSH Resolver called for host: hust02
+[11:42:20.934] Setting up SSH remote "hust02"
+[11:42:20.939] Acquiring local install lock: /tmp/vscode-remote-ssh-d8136d83-install.lock
+[11:42:20.941] Looking for existing server data file at /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[11:42:20.943] Using commit id "784b0177c56c607789f9638da7b6bf3230d47a8c" and quality "stable" for server
+[11:42:20.954] Install and start server if needed
+[11:42:20.983] askpass server listening on /tmp/vscode-ssh-askpass-2fc8fd2387e6d32bf034f9d50fde7508310f588c.sock
+[11:42:20.984] Spawning local server with {"serverId":2,"ipcHandlePath":"/tmp/vscode-ssh-askpass-b32e3c301867bf646de59d9af15997c751aee0f6.sock","sshCommand":"ssh","sshArgs":["-v","-T","-D","39789","-o","ConnectTimeout=15","hust02"],"serverDataFolderName":".vscode-server","dataFilePath":"/home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json"}
+[11:42:20.984] Local server env: {"SHELL":"/bin/bash","DISPLAY":":0","ELECTRON_RUN_AS_NODE":"1","SSH_ASKPASS":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/local-server/askpass.sh","VSCODE_SSH_ASKPASS_NODE":"/usr/share/code/code","VSCODE_SSH_ASKPASS_EXTRA_ARGS":"--ms-enable-electron-run-as-node","VSCODE_SSH_ASKPASS_MAIN":"/root/.vscode/extensions/ms-vscode-remote.remote-ssh-0.90.1/out/askpass-main.js","VSCODE_SSH_ASKPASS_HANDLE":"/tmp/vscode-ssh-askpass-2fc8fd2387e6d32bf034f9d50fde7508310f588c.sock"}
+[11:42:21.090] Spawned 130733
+[11:42:21.558] > local-server-2> Spawned ssh, pid=130768
+[11:42:21.573] stderr> OpenSSH_8.2p1 Ubuntu-4ubuntu0.5, OpenSSL 1.1.1f  31 Mar 2020
+[11:42:22.249] stderr> debug1: Server host key: ecdsa-sha2-nistp256 SHA256:RTYGHnJ48YY8z0RysizPpTP0ShpOGWw9u4R5abt086k
+[11:42:22.840] stderr> Authenticated to xz-ct1.cloudiplc.com ([221.229.197.235]:39234).
+[11:42:24.333] > Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-136-generic x86_64)
+> 
+>  * Documentation:  https://help.ubuntu.com
+>  * Management:     https://landscape.canonical.com
+>  * Support:        https://ubuntu.com/advantage
+> 
+>   System information as of Fri 07 Apr 2023 11:42:22 AM CST
+> 
+>   System load:  0.0                 Processes:                   1494
+>   Usage of /:   47.5% of 889.17GB   Users logged in:             2
+>   Memory usage: 4%                  IPv4 address for ens25f0:    172.16.9.234
+>   Swap usage:   0%                  IPv4 address for ztc25kybwp: 10.144.184.215
+>   Temperature:  44.0 C              IPv4 address for ztc25kybwp: 10.144.39.234
+> 
+>  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+>    just raised the bar for easy, resilient and secure K8s cluster deployment.
+> 
+>    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+> 
+> 168 updates can be applied immediately.
+> To see these additional updates run: apt list --upgradable
+> 
+> New release '22.04.2 LTS' available.
+> Run 'do-release-upgrade' to upgrade to it.
+> 
+> 
+> 1 updates could not be installed automatically. For more details,
+> see /var/log/unattended-upgrades/unattended-upgrades.log
+> Your Hardware Enablement Stack (HWE) is supported until April 2025.
+> 
+> *** System restart required ***
+[11:42:24.543] > ready: 94dbe36538f4
+[11:42:24.644] > Linux 5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+[11:42:24.644] Platform: linux
+[11:42:24.713] > /bin/bash
+[11:42:24.714] Shell: bash
+[11:42:24.714] Creating bash subshell inside "bash"
+[11:42:24.787] > bash version:  5.0.17(1)-release
+[11:42:24.855] > bash version:  5.0.17(1)-release
+[11:42:24.944] > 94dbe36538f4: running
+[11:42:25.048] > Acquiring lock on /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/vscode-remote-lock.xyw.784b0177c56c607789f9638da7b6bf3230d47a8c
+> Found existing installation at /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c...
+> Checking /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log and /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.pid for a running server
+> Looking for server with pid: 2452104
+> Starting server with command... /home/xyw/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all   &> "/home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log" < /dev/null
+> printenv:
+[11:42:25.240] >     SHELL=/bin/bash
+>     LC_ADDRESS=C.UTF-8
+>     LC_NAME=C.UTF-8
+>     LC_MONETARY=C.UTF-8
+>     PWD=/home/xyw
+>     NIX_PROFILES=/nix/var/nix/profiles/default /home/xyw/.nix-profile
+>     LOGNAME=xyw
+>     XDG_SESSION_TYPE=tty
+>     MOTD_SHOWN=pam
+>     HOME=/home/xyw
+>     LC_PAPER=C.UTF-8
+>     LANG=C.UTF-8
+>     NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+>     VSCODE_AGENT_FOLDER=/home/xyw/.vscode-server
+>     SSH_CONNECTION=127.0.0.1 39166 127.0.0.1 22
+>     XDG_SESSION_CLASS=user
+>     LC_IDENTIFICATION=C.UTF-8
+>     USER=xyw
+>     SHLVL=1
+>     LC_TELEPHONE=C.UTF-8
+>     LC_MEASUREMENT=C.UTF-8
+>     XDG_SESSION_ID=17267
+>     XDG_RUNTIME_DIR=/run/user/1001
+>     SSH_CLIENT=127.0.0.1 39166 22
+>     LC_TIME=C.UTF-8
+>     XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+>     PATH=/home/xyw/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>     DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+>     LC_NUMERIC=C.UTF-8
+>     _=/usr/bin/printenv
+> Removing old logfile at /home/xyw/.vscode-server/.784b0177c56c607789f9638da7b6bf3230d47a8c.log
+> Spawned remote server: 2453952
+> Waiting for server log...
+> Waiting for server log...
+>  
+[11:42:25.339] > *
+> * Reminder: You may only use this software with Visual Studio family products,
+> * as described in the license (https://go.microsoft.com/fwlink/?linkid=2077057)
+> *
+>  
+> 94dbe36538f4: start
+> SSH_AUTH_SOCK====
+> DISPLAY====
+> webUiAccessToken====
+> listeningOn==43855==
+> osReleaseId==ubuntu==
+> arch==x86_64==
+> tmpDir==/run/user/1001==
+> platform==linux==
+> unpackResult====
+> didLocalDownload==0==
+> downloadTime====
+> installTime====
+> extInstallTime====
+> serverStartTime==88==
+> connectionToken==111a111a-aaa1-1a1a-1111-aa11111a111a==
+> 94dbe36538f4: end
+[11:42:25.341] Received install output: 
+SSH_AUTH_SOCK====
+DISPLAY====
+webUiAccessToken====
+listeningOn==43855==
+osReleaseId==ubuntu==
+arch==x86_64==
+tmpDir==/run/user/1001==
+platform==linux==
+unpackResult====
+didLocalDownload==0==
+downloadTime====
+installTime====
+extInstallTime====
+serverStartTime==88==
+connectionToken==111a111a-aaa1-1a1a-1111-aa11111a111a==
+
+[11:42:25.342] Remote server is listening on 43855
+[11:42:25.342] Parsed server configuration: {"serverConfiguration":{"remoteListeningOn":{"port":43855},"osReleaseId":"ubuntu","arch":"x86_64","webUiAccessToken":"","sshAuthSock":"","display":"","tmpDir":"/run/user/1001","platform":"linux","connectionToken":"111a111a-aaa1-1a1a-1111-aa11111a111a"},"serverStartTime":88,"installUnpackCode":""}
+[11:42:25.344] Persisting server connection details to /home/xyw/Documents/Code/Csdiy/Database/DBCMU2022/bustub-20221128-2022fall/.vscode-root/User/globalStorage/ms-vscode-remote.remote-ssh/vscode-ssh-host-d8136d83-784b0177c56c607789f9638da7b6bf3230d47a8c-0.90.1/data.json
+[11:42:25.351] Starting forwarding server. localPort 37381 -> socksPort 39789 -> remotePort 43855
+[11:42:25.352] Forwarding server listening on 37381
+[11:42:25.353] Waiting for ssh tunnel to be ready
+[11:42:25.354] [Forwarding server 37381] Got connection 0
+[11:42:25.356] Tunneled 43855 to local port 37381
+[11:42:25.357] Resolved "ssh-remote+hust02" to "127.0.0.1:37381"
+[11:42:25.370] ------
+
+
+
+
+[11:42:25.409] [Forwarding server 37381] Got connection 1
+[11:42:25.900] [Forwarding server 37381] Got connection 2

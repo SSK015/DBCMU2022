@@ -1,0 +1,164 @@
+[2023-04-06 22:43:56.028] [renderer6] [info] [attempt 1] Invoking resolveAuthority(ssh-remote)
+[2023-04-06 22:43:56.099] [renderer6] [error] [Extension Host] (node:129224) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2023-04-06 22:43:56.115] [renderer6] [info] [attempt 1] resolveAuthority(ssh-remote) returned '127.0.0.1:33959' after 87 ms
+[2023-04-07 11:42:20.824] [renderer6] [info] [remote-connection][Management   ][0745a…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+[2023-04-07 11:42:20.825] [renderer6] [error] {"isTrusted":true}
+[2023-04-07 11:42:20.828] [renderer6] [info] [remote-connection][Management   ][0745a…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+[2023-04-07 11:42:20.856] [renderer6] [info] [remote-connection][Management   ][0745a…][reconnect] resolving connection...
+[2023-04-07 11:42:20.858] [renderer6] [info] Invoking resolveAuthority(ssh-remote)
+[2023-04-07 11:42:20.904] [renderer6] [info] [remote-connection][ExtensionHost][e0549…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+[2023-04-07 11:42:20.906] [renderer6] [error] {"isTrusted":true}
+[2023-04-07 11:42:20.908] [renderer6] [info] [remote-connection][ExtensionHost][e0549…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+[2023-04-07 11:42:20.908] [renderer6] [info] [remote-connection][ExtensionHost][e0549…][reconnect] resolving connection...
+[2023-04-07 11:42:25.566] [renderer6] [info] resolveAuthority(ssh-remote) returned '127.0.0.1:33151' after 4708 ms
+[2023-04-07 11:42:25.568] [renderer6] [info] [remote-connection][Management   ][0745a…][reconnect] connecting to 127.0.0.1:33151...
+[2023-04-07 11:42:25.572] [renderer6] [info] [remote-connection][ExtensionHost][e0549…][reconnect] connecting to 127.0.0.1:33151...
+[2023-04-07 11:42:27.059] [renderer6] [error] [remote-connection][Management   ][0745a…][reconnect][127.0.0.1:33151] received error control message when negotiating connection. Error:
+[2023-04-07 11:42:27.059] [renderer6] [error] Error: Connection error: Unknown reconnection token (never seen)
+    at z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:19606)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:9403
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at d.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:19365)
+    at g._receiveMessage (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:24227)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:23197
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at a.acceptChunk (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:16196)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:15326
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:45361
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at _fileReader.onload (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:43292)
+[2023-04-07 11:42:27.060] [renderer6] [error] [remote-connection][Management   ][0745a…][reconnect] A permanent error occurred in the reconnecting loop! Will give up now! Error:
+[2023-04-07 11:42:27.060] [renderer6] [error] Error: Connection error: Unknown reconnection token (never seen)
+    at z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:19606)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:9403
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at d.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:19365)
+    at g._receiveMessage (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:24227)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:23197
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at a.acceptChunk (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:16196)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:15326
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:45361
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at _fileReader.onload (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:43292)
+[2023-04-07 11:42:27.073] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/settings.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 0)
+    at async Promise.all (index 0)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.073] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/tasks.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 0)
+    at async Promise.all (index 1)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.074] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/launch.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 1)
+    at async Promise.all (index 1)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.074] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/settings.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 0)
+    at async Promise.all (index 0)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.075] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/tasks.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 0)
+    at async Promise.all (index 1)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.075] [renderer6] [error] Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/.vscode/launch.json' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async h.doReadFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:19045)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10422
+    at async Promise.all (index 1)
+    at async Promise.all (index 1)
+    at async h.resolveContents (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:10695)
+    at async b.updateCache (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1347:28425)
+[2023-04-07 11:42:27.697] [renderer6] [info] [remote-connection][ExtensionHost][e0549…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+[2023-04-07 11:42:27.698] [renderer6] [error] {"isTrusted":true}
+[2023-04-07 11:42:27.698] [renderer6] [error] [remote-connection][ExtensionHost][e0549…][reconnect][127.0.0.1:33151] received error control message when negotiating connection. Error:
+[2023-04-07 11:42:27.698] [renderer6] [error] Error: Connection error: Unknown reconnection token (never seen)
+    at z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:19606)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:9403
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at d.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:19365)
+    at g._receiveMessage (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:24227)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:23197
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at a.acceptChunk (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:16196)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:15326
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:45361
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at _fileReader.onload (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:43292)
+[2023-04-07 11:42:27.699] [renderer6] [error] [remote-connection][ExtensionHost][e0549…][reconnect] A permanent error occurred in the reconnecting loop! Will give up now! Error:
+[2023-04-07 11:42:27.699] [renderer6] [error] Error: Connection error: Unknown reconnection token (never seen)
+    at z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:19606)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:630:9403
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at d.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:19365)
+    at g._receiveMessage (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:24227)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:23197
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at a.acceptChunk (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:16196)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:545:15326
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:45361
+    at S.invoke (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:145)
+    at l.deliver (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:2266)
+    at a.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:83:1844)
+    at _fileReader.onload (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:628:43292)
+[2023-04-07 11:44:21.496] [renderer6] [error] Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled): Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async p.doRead (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42714)
+    at async p.readStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42389)
+    at async kr.resolveFromFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2752:68593)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:36858
+[2023-04-07 11:44:53.958] [renderer6] [error] Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled): Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async p.doRead (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42714)
+    at async p.readStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42389)
+    at async kr.resolveFromFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2752:68593)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:36858
+[2023-04-07 11:45:08.575] [renderer6] [error] Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled): Error: Unable to read file 'vscode-remote://ssh-remote+hust02/home/xyw/Code/recruitment-2022-spring/task2-simd/main.cpp' (Canceled: Canceled)
+    at h.doReadFileStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:603:20089)
+    at async p.doRead (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42714)
+    at async p.readStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:42389)
+    at async kr.resolveFromFile (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2752:68593)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2763:36858
