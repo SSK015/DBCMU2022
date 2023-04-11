@@ -47,6 +47,9 @@ auto BPLUSTREE_TYPE::GetValue(const KeyType &key, std::vector<ValueType> *result
  */
 INDEX_TEMPLATE_ARGUMENTS
 auto BPLUSTREE_TYPE::Insert(const KeyType &key, const ValueType &value, Transaction *transaction) -> bool {
+  if (IsEmpty()) {
+    root_page_id_ = new 
+  }
   return false;
 }
 
@@ -119,7 +122,7 @@ void BPLUSTREE_TYPE::UpdateRootPageId(int insert_record) {
   }
   buffer_pool_manager_->UnpinPage(HEADER_PAGE_ID, true);
 }
-
+// BPlusTreeLeafPage
 /*
  * This method is used for test only
  * Read data from file and insert one by one
