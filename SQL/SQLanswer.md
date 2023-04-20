@@ -20,4 +20,12 @@ GROUP BY people.name
 ORDER BY COUNT(crew.person_id) DESC
 LIMIT 20;
 **q5**
-SELECT 
+SELECT CAST(titles.premiered / 10 AS INTEGER) * 10 AS decade, AVG(rating), MAX(rating), MIN(rating), COUNT(rating)
+FROM titles
+JOIN ratings
+WHERE premiered IS NOT NULL
+AND premiered >= premiered - premiered % 10
+AND premiered < premiered - premiered % 10 + 10
+AND titles.title_id = ratings.title_id
+GROUP BY decade
+ORDER BY AVG(rating) DESC, decade ASC;
