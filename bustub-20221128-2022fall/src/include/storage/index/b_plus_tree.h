@@ -89,6 +89,7 @@ class BPlusTree {
   KeyComparator comparator_;
   int leaf_max_size_;
   int internal_max_size_;
+  ReaderWriterLatch root_page_id_latch_;
 };
 
 }  // namespace bustub

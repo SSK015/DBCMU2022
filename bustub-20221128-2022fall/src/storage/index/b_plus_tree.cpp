@@ -35,7 +35,22 @@ auto BPLUSTREE_TYPE::IsEmpty() const -> bool {
  */
 INDEX_TEMPLATE_ARGUMENTS
 auto BPLUSTREE_TYPE::GetValue(const KeyType &key, std::vector<ValueType> *result, Transaction *transaction) -> bool {
-  return false;
+  root_page_id_latch_.RLock();
+  auto leaf_page = FindLeaf(key, Operation::SEARCH, transaction);
+  auto *node = reinterpret_cast<LeafPage *>(leaf_page->GetData());
+  ValueType v;
+  auto _found = node->Lookup(key, &v, comparator_);
+
+  leaf_page->RUnlatch();
+  buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), false);
+
+  if (_found) {
+    return false;
+  }
+  
+
+  result->push_back(v);
+  return true;
 }
 
 /*****************************************************************************
@@ -50,12 +65,34 @@ auto BPLUSTREE_TYPE::GetValue(const KeyType &key, std::vector<ValueType> *result
  */
 INDEX_TEMPLATE_ARGUMENTS
 auto BPLUSTREE_TYPE::Insert(const KeyType &key, const ValueType &value, Transaction *transaction) -> bool {
+  root_page_id_latch_.Wlock();
+  transaction->AddIntoPageSet(nullptr);
+
   if (IsEmpty()) {
-    root_page_id_ = new 
+    NewBplusTree(key, value);
+    ReleaseLatchFromQueue(transaction);
+    return true;
   }
-  return false;
+  return LeafInsert(key, value, transaction);
+
 }
 
+INDEX_TEMPLATE_ARGUMENTS
+void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
+  auto page = buffer_pool_manager_->NewPage(&root_page_id_);
+
+  if (page == nullptr) {
+    throw Exception(ExceptionType::OUT_OF_MEMORY, "no memory available.");
+  }
+
+  auto leaf = reinterpret_cast<LeafPage *>(page->GetData());
+  leaf->Init(root_page_id_, INVALID_PAGE_ID, leaf_max_size_);
+  leaf->Insert(key, value, comparator_);
+
+  buffer_pool_manager_->UnpinPage(page->GetPageId(), true);
+
+
+}
 /*****************************************************************************
  * REMOVE
  *****************************************************************************/
