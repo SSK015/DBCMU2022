@@ -76,6 +76,33 @@ auto BPLUSTREE_TYPE::Insert(const KeyType &key, const ValueType &value, Transact
   return LeafInsert(key, value, transaction);
 
 }
+INDEX_TEMPLATE_ARGUMENTS
+void BPLUSTREE_TYPE::Remove(const KeyType &key, Transaction *transaction) {
+  root_page_id_latch_.WLock();
+  transaction->AddIntoPageSet(nullptr);
+  if (IsEmpty()) {
+    ReleaseLatchFromQueue(transaction);
+  }
+
+  auto leaf_page = FindLeaf(key, OPERATION::DELETE, transaction);
+  auto *node = reinterpret_cast<LeafPage *>(leaf_page->GetData());
+
+  if (node->GetSize() == node->RemoveAndDeleteRecord(key, comparator_)) {
+    ReleaseLatchFromQueue(transaction);
+    leaf_page->WUnlatch();
+    buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), false);
+    return ;
+  }
+
+  auto node_Coal = CoalesceOrRedistribute(node, transaction);
+  leaf_page->WUnlatch();
+
+  if (node_Coal) {
+    transaction->AddIntoDeletedPageSet(node->GetPageId());
+
+  }
+  buffer_pool_manager_->UnpinPage()
+}
 
 INDEX_TEMPLATE_ARGUMENTS
 void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
@@ -103,8 +130,6 @@ void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
  * delete entry from leaf page. Remember to deal with redistribute or merge if
  * necessary.
  */
-INDEX_TEMPLATE_ARGUMENTS
-void BPLUSTREE_TYPE::Remove(const KeyType &key, Transaction *transaction) {}
 
 /*****************************************************************************
  * INDEX ITERATOR

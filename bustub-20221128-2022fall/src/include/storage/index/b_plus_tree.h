@@ -73,8 +73,11 @@ class BPlusTree {
 
   // read data from file and remove one by one
   void RemoveFromFile(const std::string &file_name, Transaction *transaction = nullptr);
+  auto FindLeaf(const KeyType &key, const ValueType &value, Transaction *transaction = nullptr, bool leftMost = false, boool rightMost = nullptr) -> Page*;
 
+  void ReleaseLatchFromQueue(Transaction *transaction);
  private:
+  void NewBplusTree(const KeyType &key, const ValueType &value);
   void UpdateRootPageId(int insert_record = 0);
 
   /* Debug Routines for FREE!! */
@@ -82,6 +85,20 @@ class BPlusTree {
 
   void ToString(BPlusTreePage *page, BufferPoolManager *bpm) const;
 
+  template <typename N>
+  auto Split(N *node) -> N *;
+
+  template <typename N>
+  auto CoalesceOrRedistribute(N *node, Transaction *transaction = nullptr) -> bool;
+
+  template <typename N>
+  void Coalesce(N* neigh_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
+  Transaction *transaction = nullptr);
+
+  void Redistribute(N* neigh_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
+  Transaction *transaction = nullptr);
+
+  auto AdjustRoot(BPlusTreePage *node) -> bool;
   // member variable
   std::string index_name_;
   page_id_t root_page_id_;
