@@ -150,7 +150,7 @@ bool rightMost) -> Page * {
     buffer_pool_manager_->UnpinPage(page->GetPageId(), false);
 
   } else if {
-    
+
   }
 
 }
@@ -170,6 +170,34 @@ void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
   buffer_pool_manager_->UnpinPage(page->GetPageId(), true);
 
 
+}
+
+
+INDEX_TEMPLATE_ARGUMENTS
+auto BPLUSTREE_TYPE::InsertIntoLeaf(const KeyType &key, const ValueType &value, Transaction *transaction) -> bool {
+  auto leaf_page = Findleaf(key, Operation::INSERT, transaction);
+  auto *node = reinterpret_cast<LeafPage *>(leaf_page->GetData());
+
+  auto size = node->GetSize();
+  auto new_size = node->Insert(key, value, comparator_);
+
+  if (new_size == size) {
+    ReleaseLatchFromQueue(transaction);
+    leaf_page->WUnlatch();
+    buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), true);
+    return false;
+  }
+
+  if (new_size < leaf_max_size) {
+    ReleaseLatchFromQueue(transaction);
+    leaf_page->WUnlatch();
+    buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), true);
+    return true;
+  }
+
+  auto leaf_sibling_node = Split(node);
+  leaf_sibling_node->SetNextPageId(node->GetNextPageId());
+  
 }
 /*****************************************************************************
  * REMOVE
