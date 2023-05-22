@@ -101,7 +101,58 @@ void BPLUSTREE_TYPE::Remove(const KeyType &key, Transaction *transaction) {
     transaction->AddIntoDeletedPageSet(node->GetPageId());
 
   }
-  buffer_pool_manager_->UnpinPage()
+
+  buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), true);
+  std::for_each(transaction->GetDeletedPageSet()->begin(), transaction->GetDeletedPageSet->end(),
+  [&bpm = buffer_pool_manager_](const page_id_t page_id) { bpm->DeletePage(page_id); });
+
+  transaction->GetDeletedPageSet()->clear();
+
+
+}
+
+INDEX_TEMPLATE_ARGUMENTS
+auto BPLUSTREE_TYPE::FindLeaf(const KeyType &key, Operation operation, Transaction *transaction, bool leftMost,
+bool rightMost) -> Page * {
+
+  assert(root_page_id_ != INVALID_PAGE_ID);
+  auto page = buffer_pool_manager_->FetchPage(root_page_id_);
+
+  auto *node = reinterpret_cast<BPlusTreePage *>(page->GetData());
+  if (operation == Operation::SEARCH) {
+    root_page_id_latch_.RUnlock();
+    page->Rlatch();
+  } else {
+
+  }
+
+  while (!node->IsLeafPage()) {
+    auto *cur_node = reinterpret_cast<InternalPage *>(node);
+
+    page_id_t child_node_page_id;
+    if (leftMost) {
+      child_node_page_id = cur_node->ValueAt(0);
+    } else if (rightMost) {
+      child_node_page_id = cur_node->ValueAt(cur_node->GetSize() - 1);
+
+    } else {
+      child_node_page_id = cur_node->Lookup(key, comparator_);
+    }
+  }
+  assert(child_node_page_id > 0);
+
+  auto child_page = buffer_pool_manager_->FetchPage(child_node_page_id);
+  auto child_node = reinterpret_cast<BPlusTreePage *>(child_page->GetData());
+
+  if (operation == SEARCH) {
+    child_page->Rlatch();
+    page->RUnlatch();
+    buffer_pool_manager_->UnpinPage(page->GetPageId(), false);
+
+  } else if {
+    
+  }
+
 }
 
 INDEX_TEMPLATE_ARGUMENTS

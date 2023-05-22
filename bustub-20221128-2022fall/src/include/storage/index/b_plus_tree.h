@@ -23,6 +23,7 @@ namespace bustub {
 
 #define BPLUSTREE_TYPE BPlusTree<KeyType, ValueType, KeyComparator>
 
+enum class Operation{SERACH, INSERT, DELETE};
 /**
  * Main class providing the API for the Interactive B+ Tree.
  *
