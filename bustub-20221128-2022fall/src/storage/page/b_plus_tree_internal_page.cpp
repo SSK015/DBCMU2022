@@ -54,6 +54,23 @@ void B_PLUS_TREE_INTERNAL_PAGE_TYPE::SetKeyAt(int index, const KeyType &key) {
 INDEX_TEMPLATE_ARGUMENTS
 auto B_PLUS_TREE_INTERNAL_PAGE_TYPE::ValueAt(int index) const -> ValueType { return array_[index].second; }
 
+auto B_PLUS_TREE_INTERNAL_PAGE_TYPE::Lookup(const KeyType &key, const KeyComparator &comparator) -> ValueType {
+  auto target = std::lower_bound(array_, array_ + GetSize(), key,
+                                [&comparator](const auto &pair, auto k) {return comparator(pair.first, k) < 0;});
+  
+  if (target == array_ + GetSize()) {
+    return ValueAt(GetSize() - 1);
+
+  } 
+  if (comparator(target->first, key) == 0) {
+    return target->second;
+
+  }
+  return std::prev(target)->second;
+}
+
+INDEX_TEMPLATE_ARGUMENTS
+auto ValueAt(int index) const -> ValueType;
 // valuetype for internalNode should be page id_t
 template class BPlusTreeInternalPage<GenericKey<4>, page_id_t, GenericComparator<4>>;
 template class BPlusTreeInternalPage<GenericKey<8>, page_id_t, GenericComparator<8>>;

@@ -44,7 +44,7 @@ auto BPLUSTREE_TYPE::GetValue(const KeyType &key, std::vector<ValueType> *result
   leaf_page->RUnlatch();
   buffer_pool_manager_->UnpinPage(leaf_page->GetPageId(), false);
 
-  if (_found) {
+  if (!_found) {
     return false;
   }
   
@@ -138,7 +138,7 @@ bool rightMost) -> Page * {
     } else {
       child_node_page_id = cur_node->Lookup(key, comparator_);
     }
-  }
+  
   assert(child_node_page_id > 0);
 
   auto child_page = buffer_pool_manager_->FetchPage(child_node_page_id);
@@ -153,12 +153,17 @@ bool rightMost) -> Page * {
 
   }
 
+  page = child_page;
+  node = child_node;
+  }
+  return page;
+
 }
 
 INDEX_TEMPLATE_ARGUMENTS
 void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
   auto page = buffer_pool_manager_->NewPage(&root_page_id_);
-
+  
   if (page == nullptr) {
     throw Exception(ExceptionType::OUT_OF_MEMORY, "no memory available.");
   }

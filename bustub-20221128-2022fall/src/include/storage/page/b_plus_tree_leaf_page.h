@@ -50,9 +50,19 @@ class BPlusTreeLeafPage : public BPlusTreePage {
   void SetNextPageId(page_id_t next_page_id);
   auto KeyAt(int index) const -> KeyType;
 
+  auto Lookup(const KeyType &key, const KeyComparator &comparator) const -> ValueType;
+  auto ValueAt(int index) const -> ValueType; 
+  void Remove(int index);
+  auto KeyIndex(const KeyType &key, ValueType *value, const KeyComparator &comparator) const -> int;
+  // void MoveAll
+  
  private:
   page_id_t next_page_id_;
   // Flexible array member for page data.
+  void CopyNFrom(MappingType *items, int size, BufferPoolManager *buffer_pool_manager);
+  void CopyLastFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
+  void CopyFirstFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
+
   MappingType array_[1];
 };
 }  // namespace bustub

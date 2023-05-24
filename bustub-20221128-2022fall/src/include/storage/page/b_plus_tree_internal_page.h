@@ -41,9 +41,17 @@ class BPlusTreeInternalPage : public BPlusTreePage {
   auto KeyAt(int index) const -> KeyType;
   void SetKeyAt(int index, const KeyType &key);
   auto ValueAt(int index) const -> ValueType;
+  
+  auto Lookup(const KeyType &key, const KeyComparator &comparator) -> ValueType;
 
+  void Remove(int index);
+  
  private:
   // Flexible array member for page data.
   MappingType array_[1];
+  void CopyNFrom(MappingType *items, int size, BufferPoolManager *buffer_pool_manager);
+  void CopyLastFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
+  void CopyFirstFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
+
 };
 }  // namespace bustub

@@ -74,8 +74,7 @@ class BPlusTree {
 
   // read data from file and remove one by one
   void RemoveFromFile(const std::string &file_name, Transaction *transaction = nullptr);
-  auto FindLeaf(const KeyType &key, const ValueType &value, Transaction *transaction = nullptr, bool leftMost = false, boool rightMost = nullptr) -> Page*;
-
+  auto FindLeaf(const KeyType &key, Operation operation, Transaction *transaction = nullptr, bool leftMost = false, boool rightMost = false) -> Page *;
   void ReleaseLatchFromQueue(Transaction *transaction);
  private:
   void NewBplusTree(const KeyType &key, const ValueType &value);
