@@ -43,7 +43,7 @@ class BPlusTreeInternalPage : public BPlusTreePage {
   auto ValueAt(int index) const -> ValueType;
   
   auto Lookup(const KeyType &key, const KeyComparator &comparator) -> ValueType;
-
+  void PopulateNewRoot(const ValueType &old_value, const KeyType &new_key, const ValueType &new_value);
   void Remove(int index);
   
  private:
