@@ -251,7 +251,30 @@ void BPLUSTREE_TYPE::ParentInsert(BPlusTreePage *old_node, const KeyType &key, B
     ReleaseLatchFromQueue(transaction);
     return ;
   } else {
-    auto parent_page = 
+    auto parent_page = buffer_pool_manager_->FetchPage(old_node->GetParentPageId());
+    auto *parent_node = reinterpret_cast<InternalPage *> parent_page->GetData();
+
+    if (parent_node->GetSize() < internal_max_size_) {
+      parent_node->InsertNodeAfter(old_node->GetPageId(), key, new_node->GetPageId());
+      ReleaseLatchFromQueue(transaction);
+    
+      buffer_pool_manager_->UnpinPage(parent_page->GetPageId(), true);
+      return ;
+    }
+
+    auto *mem = new char[INTERNAL_PAGE_HEADER_SIZE + sizeof(MappingType) * (parent_node->GetSize() + 1)];
+    auto *copy_parent_node = reinterpret_cast<InternalPage *>(mem);
+    std::memcpy(mem, parent_page->GetData(), INTERNAL_PAGE_HEADER_SIZE + sizeof(MappingType) * (parent_node->GetSize()));
+    copy_parent_node->InsertNodeAfter(old_node->GetPageId(), key, new_node->GetPageId());
+    auto parent_new_sibling_node = Split(copy_parent_node);
+    KeyType new_key = parent_new_sibling_node->KeyAt(0);
+    std::memcpy(parent_page->GetData(), mem, INTERNAL_PAGE_HEADER_SIZE + sizeof(MappingType) * (copy_parent_node->GetMinSize()));
+    ParentInsert(parent_node, new_key, parent_new_sibling_node, transaction);
+
+    buffer_pool_manager_->UnpinPage(parent_page->GetPageId(), true);
+    buffer_pool_manager_->UnpinPage(parent_new_sibling_node->GetPageId(), true);
+
+    delete[] mem;
   }
 
 }
