@@ -66,7 +66,20 @@ auto B_PLUS_TREE_LEAF_PAGE_TYPE::KeyAt(int index) const -> KeyType {
 }
 
 INDEX_TEMPLATE_ARGUMENTS
-auto B_PLUS_TREE_LEAF_PAGE_TYPE::Lookup(const KeyType &key, ValueType *value, const KeyComparator &comparator) const -> bool {
+void B_PLUS_TREE_LEAF_PAGE_TYPE::MoveHalfTo(BPlusTreeLeafPage *recipient) {
+  int start_split_index = GetMinSize();
+  SetSize(start_split_index);
+  recipient->CopyNFrom(array_ + start_split_index, GetMaxSize() - start_split_index);
+}
+
+INDEX_TEMPLATE_ARGUMENTS
+void B_PLUS_TREE_LEAF_PAGE_TYPE::CopyNFrom(MappingType *items, int size) {
+  std::copy(items, items + size, array_ + GetSize());
+  IncreaseSize(size);
+}
+
+INDEX_TEMPLATE_ARGUMENTS
+auto B_PLUS_TREE_LEAF_PAGE_TYPE::Lookup(const KeyType &key, ValueType *value, const KeyComparator &keyComparator) const -> bool {
   // auto target = std::lower_bound(array_, array_ + GetSize())
   int target_index = KeyIndex(key, comparator);
   if (target_index == GetSize() || comparator(array_[target_index].first, key) != 0) {
@@ -78,7 +91,37 @@ auto B_PLUS_TREE_LEAF_PAGE_TYPE::Lookup(const KeyType &key, ValueType *value, co
 }
 
 INDEX_TEMPLATE_ARGUMENTS
-void
+auto B_PLUS_TREE_LEAF_PAGE_TYPE::Insert(const KeyType &key, const ValueType &value, const KeyComparator &keyComparator) -> int {
+  auto insert_index = KeyIndex(key, keyComparator);
+  if (insert_index == GetSize()) {
+    *(array_ + insert_index) = {key, value};
+    IncreaseSize(1);
+    return GetSize();
+  }
+  if (keyComparator(array_[insert_index].first, key) == 0) {
+    return GetSize();
+  }
+
+  std::move_backward(array_ + insert_index, array_ + GetSize(), array_ + GetSize() + 1);
+  *(array + insert_index) = {key, value};
+  IncreaseSize(1);
+
+  return GetSize();
+} 
+
+INDEX_TEMPLATE_ARGUMENTS
+auto B_PLUS_TREE_LEAF_PAGE_TYPE::RemoveAndDeleteRecord(const KeyType &key, const KeyComparator &keyComparator) -> int {
+  int target_index = KeyIndex(key, keyComparator);
+  if (target_index == GetSize() || keyComparator(array_[target_index].first, key) != 0) {
+    return GetSize();
+  }
+
+  std::move(array_ + target_index + 1, target_index + GetSize(), array_ + target_index);
+  IncreaseSize(-1);
+
+  return GetSize();
+}
+
 
 template class BPlusTreeLeafPage<GenericKey<4>, RID, GenericComparator<4>>;
 template class BPlusTreeLeafPage<GenericKey<8>, RID, GenericComparator<8>>;

@@ -138,7 +138,7 @@ bool rightMost) -> Page * {
     root_page_id_latch_.RUnlock();
     page->Rlatch();
   } else {
-
+    if ()
   }
 
   while (!node->IsLeafPage()) {
@@ -164,10 +164,23 @@ bool rightMost) -> Page * {
     page->RUnlatch();
     buffer_pool_manager_->UnpinPage(page->GetPageId(), false);
 
-  } else if {
+  } else if (operation == Operation::INSERT) {
+    child_page->WLatch();
+    transaction->AddIntoPageSet(page);
 
+    if (child_node->IsLeafPage() && child_node->GetSize() < child_node->GetMaxSize() - 1)
+      ReleaseLatchFromQueue(transaction);
+    if (!child_node->IsLeafPage() && child_node->GetSize() < child_node->GetMaxSize()) {
+      ReleaseLatchFromQueue(transaction);
+    }
+  } else if (operation == Operation::DELETE) {
+    child_page->WLatch();
+    transaction->AddIntoPageSet(page);
+
+    if (child_node->GetSize() > child_node->GetMinSize()) {
+      ReleaseLatchFromQueue(transaction);
+    }
   }
-
   page = child_page;
   node = child_node;
   }
@@ -189,7 +202,37 @@ void BPLUSTREE_TYPE::NewBplusTree(const KeyType &key, const ValueType &value) {
 
   buffer_pool_manager_->UnpinPage(page->GetPageId(), true);
 
+  return ;
 
+}
+
+INDEX_TEMPLATE_ARGUMENTS
+template <typename N>
+auto BPLUSTREE_TYPE::Split(N *node) -> N * {
+  page_id_t page_id;
+  auto page = buffer_pool_manager_->NewPage(&page_id);
+
+  if (page == nullptr) {
+    throw Exception(ExceptionType::OUT_OF_MEMORY, "Cannot allocate new page");
+  }
+
+  N *new_node = reinterpret_cast<N *>(page->GetData());
+  new_node->SetPageType(node->GetPageType());
+
+  if (node->IsLeafPage()) {
+    auto *leaf = reinterpret_cast<LeafPage *>(node);
+    auto *new_leaf = reinterpret_cast<LeafPage *>(new_node);
+    new_leaf->Init(page->GetPageId(), node->GetParentPageId(), leaf_max_size_);
+    leaf->MoveHalfTo(new_leaf);
+  } else {
+    auto *internal = reinterpret_cast<InternalPage *>(node);
+    auto *new_internal = reinterpret_cast<InternalPage *>(new_node);
+
+    new_internal->Init(page->GetPageId(), node->GetParentPageId(), internal_max_size_);
+    internal->MoveHalfTo(new_internal, buffer_pool_manager_);
+  }
+
+  return new_node;
 }
 
 

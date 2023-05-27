@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.sqlite3": "aspnetcorerazor",
+        "iostream": "cpp"
+    }
+}

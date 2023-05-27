@@ -49,19 +49,28 @@ class BPlusTreeLeafPage : public BPlusTreePage {
   auto GetNextPageId() const -> page_id_t;
   void SetNextPageId(page_id_t next_page_id);
   auto KeyAt(int index) const -> KeyType;
+  auto Insert(const KeyType &key, const ValueType &value, const KeyComparator &keyComparator) -> int;
 
-  auto Lookup(const KeyType &key, const KeyComparator &comparator) const -> ValueType;
+  auto Lookup(const KeyType &key, ValueType *value, const KeyComparator &keyComparator) const -> bool;
   auto ValueAt(int index) const -> ValueType; 
   void Remove(int index);
-  auto KeyIndex(const KeyType &key, ValueType *value, const KeyComparator &comparator) const -> int;
+  auto KeyIndex(const KeyType &key, const KeyComparator &comparator) const -> int;
+
+  auto RemoveAndDeleteRecord(const KeyType &key, const KeyComparator &keyComparator) -> int;
   // void MoveAll
   
+  void MoveHalfTo(BPlusTreeLeafPage *recipient);
+  void MoveAllTo(BPlusTreeLeafPage *recipient);
+  void MoveFirstToEndOf(BPlusTreeLeafPage *recipient);
+  void MoveLastToFrontOf(BPlusTreeLeafPage *recipient);
+
+
  private:
   page_id_t next_page_id_;
   // Flexible array member for page data.
-  void CopyNFrom(MappingType *items, int size, BufferPoolManager *buffer_pool_manager);
-  void CopyLastFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
-  void CopyFirstFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
+  void CopyNFrom(MappingType *items, int size);
+  void CopyLastFrom(const MappingType &pair);
+  void CopyFirstFrom(const MappingType &pair);
 
   MappingType array_[1];
 };
