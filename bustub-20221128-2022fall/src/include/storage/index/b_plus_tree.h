@@ -94,11 +94,12 @@ class BPlusTree {
   auto CoalesceOrRedistribute(N *node, Transaction *transaction = nullptr) -> bool;
 
   template <typename N>
-  void Coalesce(N* neigh_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
-  Transaction *transaction = nullptr);
+  auto Coalesce(N* neighbor_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
+  Transaction *transaction = nullptr) -> bool;
 
-  void Redistribute(N* neigh_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
-  Transaction *transaction = nullptr);
+  template <typename N>
+  void Redistribute(N* neighbor_node, N* node, BPlusTreeInternalPage<KeyType, page_id_t, KeyComparator> *parent, int index,
+  bool from_prev);
 
   auto AdjustRoot(BPlusTreePage *node) -> bool;
   // member variable
